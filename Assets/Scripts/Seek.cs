@@ -11,7 +11,7 @@ public class Seek : MonoBehaviour {
 
     private float aggro_dis = 20;
 
-	private float min_dis = 3;
+	private float min_dis = 5;
 
 
 

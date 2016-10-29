@@ -25,7 +25,7 @@ GameObject:
   - 114: {fileID: 114000013893632998}
   - 54: {fileID: 54000011477108742}
   - 64: {fileID: 64000013141303952}
-  - 114: {fileID: 114000010491651900}
+  - 114: {fileID: 114000010515348768}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -121,7 +121,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114000010491651900
+--- !u!114 &114000010515348768
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011140829754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 986c7e02752da4f48adcf9480112796c, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c02045f0b6c214eb6d5064d523d0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
