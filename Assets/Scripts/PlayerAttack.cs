@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
     public float attackTimer;
     public float coolDown;
 
+    
+
     // Use this for initialization
     void Start()
     {
@@ -35,13 +37,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        float distance = Vector3.Distance(target.transform.position, transform.position);
-        Vector3 dir = (target.transform.position - transform.position).normalized;
-        float direction = Vector3.Dot(dir, transform.forward);
-        Debug.Log(direction);
-
-
-
+        
     }
 }
 

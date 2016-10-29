@@ -13,7 +13,7 @@ public class Seek : MonoBehaviour {
 
 	private float min_dis = 3;
 
-    private int health = 100;
+
 
 	// Use this for initialization
 	void Start () {
@@ -36,23 +36,5 @@ public class Seek : MonoBehaviour {
             //Go Forward
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
 		}
-
-	    if (health <= 0)
-	    {
-	        gameObject.SetActive(false);
-	    }
 	}
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            health = health - 30;
-
-            if (health < 0)
-            {
-                health = 0;
-            }
-        }
-    }
 }
