@@ -11,7 +11,19 @@ public class CameraController : MonoBehaviour {
 	void Start () {
 		offset = transform.position - player.transform.position;
 	}
-	
+
+    void Update()
+    {
+        /*if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Rotate(0, -(Time.deltaTime*50), 0);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Rotate(0, (Time.deltaTime * 50), 0);
+        }
+        */
+    }
 	
 	void LateUpdate () {
 		transform.position = player.transform.position + offset;

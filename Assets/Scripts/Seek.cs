@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Seek : MonoBehaviour {
 
 	public float speed = 10.0f;
@@ -13,17 +14,24 @@ public class Seek : MonoBehaviour {
 
 	private float min_dis = 5;
 
-
+    public bool hostile; // If the enemy is hostile, this is true.
 
 	// Use this for initialization
 	void Start () {
-
+	    if (CompareTag("Tutorial"))
+	    {
+	        hostile = false;
+	    }
+	    else
+	    {
+	        hostile = true;
+	    }
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		Debug.Log (target.position);
-		if ((Vector3.Distance(transform.position, target.position) < aggro_dis) && (Vector3.Distance (transform.position, target.position) > min_dis)) 
+		if ((Vector3.Distance(transform.position, target.position) < aggro_dis) && (Vector3.Distance (transform.position, target.position) > min_dis) && (hostile)) 
 		{
             /*Rotate to the target point
 			Quaternion targetRotation = Quaternion.LookRotation(target.position - transform.position);		

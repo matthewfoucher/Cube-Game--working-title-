@@ -5,13 +5,15 @@ using UnityEngine.UI;
 public class NPCScript : MonoBehaviour
 {
     public GameObject player;
-    public Text dialog;
+    public Text dialog1;
+    public Text dialog2;
     public RawImage box;
     private bool pressed = false;
 	// Use this for initialization
 	void Start ()
 	{
-	    dialog.text = "";
+	    dialog1.text = "";
+	    dialog2.text = "";
         box.gameObject.SetActive(false);
 	}
 	
@@ -25,13 +27,15 @@ public class NPCScript : MonoBehaviour
 	            pressed = true;
 	            transform.LookAt(player.transform);
                 box.gameObject.SetActive(true);
-	            dialog.text = "We've all been turned into cubes by the three-headed dragon!";
+	            dialog1.text = "We've all been turned into cubes by the three-headed dragon!";
+                
 	        }
             else if (pressed == true)
             {
                 pressed = false;
                 box.gameObject.SetActive(false);
-                dialog.text = "";
+                dialog1.text = "";
+                dialog2.text = "";
             }
         }
     }

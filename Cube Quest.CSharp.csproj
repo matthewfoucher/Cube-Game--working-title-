@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Seek.cs" />
+    <Compile Include="Assets\Scripts\TutorialGoblin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Inventory.txt" />

@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    public GridLayoutGroup grid;
+    public Image panel;
+    private bool pressed;
     // private Rigidbody rb;
 
     void Start()
     {
-       // rb = GetComponent<Rigidbody>();
+        pressed = false;
+        // rb = GetComponent<Rigidbody>();
+        grid.gameObject.SetActive(false);
+        panel.gameObject.SetActive(false);
     }
 
     void Update()
@@ -22,12 +28,28 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Z))
         {
-            transform.Rotate(0, -(Time.deltaTime * 20), 0);
+            transform.Rotate(0, -(Time.deltaTime * 50), 0);
         }
 
         if (Input.GetKey(KeyCode.C))
         {
-            transform.Rotate(0, (Time.deltaTime * 20), 0);
+            transform.Rotate(0, (Time.deltaTime * 50), 0);
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (!pressed)
+            {
+                grid.gameObject.SetActive(true);
+                panel.gameObject.SetActive(true);
+                pressed = true;
+            }
+            else
+            {
+                grid.gameObject.SetActive(false);
+                panel.gameObject.SetActive(false);
+                pressed = false;
+            }
+
         }
     }
 
