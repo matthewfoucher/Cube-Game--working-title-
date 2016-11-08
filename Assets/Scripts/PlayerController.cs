@@ -8,13 +8,14 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public GridLayoutGroup grid;
     public Image panel;
+    public Camera mainCamera;
     private bool pressed;
-    // private Rigidbody rb;
+    private Rigidbody rb;
 
     void Start()
     {
         pressed = false;
-        // rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         grid.gameObject.SetActive(false);
         panel.gameObject.SetActive(false);
     }
@@ -24,17 +25,10 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        movement = transform.TransformDirection(movement);
         transform.position += (movement * speed);
 
-        if (Input.GetKey(KeyCode.Z))
-        {
-            transform.Rotate(0, -(Time.deltaTime * 50), 0);
-        }
 
-        if (Input.GetKey(KeyCode.C))
-        {
-            transform.Rotate(0, (Time.deltaTime * 50), 0);
-        }
         if (Input.GetKeyDown(KeyCode.I))
         {
             if (!pressed)
@@ -53,8 +47,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    /*void FixedUpdate()
     {
-        
-    }
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        rb.AddForce(movement * speed);
+    }*/
 }
