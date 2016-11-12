@@ -66,33 +66,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Curse of Cubes Dovahkube.CSharp.Plugins.csproj">
-      <Project>{782237E0-1E81-D4A6-4D12-C66E781B7866}</Project>
-      <Name>Curse of Cubes Dovahkube.CSharp.Plugins</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyScript.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
-    <Compile Include="Assets\Scripts\NPCScript.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Seek.cs" />
-    <Compile Include="Assets\Scripts\SmoothMouseLook.cs" />
-    <Compile Include="Assets\Scripts\TutorialGoblin.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Scripts\Inventory.txt" />
-    <None Include="Assets\Scripts\PlayerAttack.txt" />
-    <None Include="Assets\Scripts\ThirdPerson.txt" />
-    <None Include="Assets\Scripts\ThirdPersonController.txt" />
-    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <Compile Include="Assets\Scripts\1.Player\Player.cs" />
+    <Compile Include="Assets\Scripts\1.Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\1.Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\1.Player\SmoothMouseLook.cs" />
+    <Compile Include="Assets\Scripts\2.Model\Goblins\Enemy.cs" />
+    <Compile Include="Assets\Scripts\2.Model\Goblins\TutorialGoblin.cs" />
+    <Compile Include="Assets\Scripts\3.View\Inventory.cs" />
+    <Compile Include="Assets\Scripts\4.Controllers\NPCScript.cs" />
+    <Compile Include="Assets\Scripts\4.Controllers\Seek.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

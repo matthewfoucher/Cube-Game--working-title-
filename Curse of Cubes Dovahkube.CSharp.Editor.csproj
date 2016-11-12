@@ -102,10 +102,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Curse of Cubes Dovahkube.CSharp.Plugins.csproj">
-      <Project>{782237E0-1E81-D4A6-4D12-C66E781B7866}</Project>
-      <Name>Curse of Cubes Dovahkube.CSharp.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="Curse of Cubes Dovahkube.CSharp.csproj">
       <Project>{D08DD66E-0482-38E2-73F6-2238ADAD832E}</Project>
       <Name>Curse of Cubes Dovahkube.CSharp</Name>
@@ -113,16 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Scripts\Inventory.txt" />
-    <None Include="Assets\Scripts\PlayerAttack.txt" />
-    <None Include="Assets\Scripts\ThirdPerson.txt" />
-    <None Include="Assets\Scripts\ThirdPersonController.txt" />
-    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
