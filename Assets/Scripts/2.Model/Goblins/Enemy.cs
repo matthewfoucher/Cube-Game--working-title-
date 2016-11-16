@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        isDead = false;
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
     }

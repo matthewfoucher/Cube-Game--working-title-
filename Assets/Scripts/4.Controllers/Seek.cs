@@ -12,12 +12,17 @@ public class Seek : MonoBehaviour {
 
     private float aggro_dis = 20;
 
-	private float min_dis = 5;
+	private float min_dis = 2.0f;
 
     public bool hostile; // If the enemy is hostile, this is true.
 
-	// Use this for initialization
-	void Start () {
+    public GameObject weapon; // The enemy's weapon.
+    public float attackTimer; // The remaining time before the player can attack again.
+    public float coolDown; // The total time before the player can attack again.
+    private bool weaponDown; // Is the weapon in attack position?
+
+    // Use this for initialization
+    void Start () {
 	    if (CompareTag("Tutorial"))
 	    {
 	        hostile = false;
@@ -26,11 +31,21 @@ public class Seek : MonoBehaviour {
 	    {
 	        hostile = true;
 	    }
-	}
+
+        attackTimer = 0;
+        coolDown = 2;
+        weaponDown = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (target.position);
+        if (attackTimer > 0)
+            attackTimer -= Time.deltaTime;
+
+        if (attackTimer < 0)
+            attackTimer = 0;
+
+        Debug.Log (target.position);
 		if ((Vector3.Distance(transform.position, target.position) < aggro_dis) && (Vector3.Distance (transform.position, target.position) > min_dis) && (hostile)) 
 		{
             /*Rotate to the target point
@@ -44,5 +59,27 @@ public class Seek : MonoBehaviour {
             //Go Forward
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
 		}
+
+	    if ((Vector3.Distance(transform.position, target.position) < 2.5f) && (hostile))
+	    {
+            // Atack the player.
+            if (attackTimer == 0)
+            {
+                // Attack();
+                weapon.transform.Rotate(0, 0, 90);
+                attackTimer = coolDown;
+                weaponDown = true;
+                Invoke("ResetAttack", 0.1f);
+            }
+        }
 	}
+
+    void ResetAttack()
+    {
+        if (weaponDown)
+        {
+            weaponDown = false;
+            weapon.transform.Rotate(0, 0, -90);
+        }
+    }
 }

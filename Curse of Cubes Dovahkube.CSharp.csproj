@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\2.Model\Goblins\Enemy.cs" />
     <Compile Include="Assets\Scripts\2.Model\Goblins\TutorialGoblin.cs" />
     <Compile Include="Assets\Scripts\3.View\Inventory.cs" />
+    <Compile Include="Assets\Scripts\3.View\MainMenu.cs" />
     <Compile Include="Assets\Scripts\4.Controllers\NPCScript.cs" />
     <Compile Include="Assets\Scripts\4.Controllers\Seek.cs" />
   </ItemGroup>

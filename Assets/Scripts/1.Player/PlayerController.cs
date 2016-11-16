@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         movement = transform.TransformDirection(movement);
-        transform.position += (movement * speed);
+        transform.position += (movement * speed * Time.deltaTime);
 
 
         if (Input.GetKeyDown(KeyCode.I))
@@ -55,6 +55,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             transform.Translate(Vector3.up * jumpForce * Time.deltaTime, Space.World);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = speed * 1.5f;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = speed / 1.5f;
         }
     }
 }
