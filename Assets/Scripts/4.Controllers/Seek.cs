@@ -69,7 +69,7 @@ public class Seek : MonoBehaviour {
                 weapon.transform.Rotate(0, 0, 90);
                 attackTimer = coolDown;
                 weaponDown = true;
-                Invoke("ResetAttack", 0.1f);
+                Invoke("ResetAttack", 0.2f);
             }
         }
 	}

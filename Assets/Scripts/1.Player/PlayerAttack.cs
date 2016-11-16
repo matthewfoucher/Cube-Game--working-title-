@@ -34,15 +34,17 @@ public class PlayerAttack : MonoBehaviour
                 weapon.transform.Rotate(0, 0, 90);
                 attackTimer = coolDown;
                 weaponDown = true;
+                Invoke("ResetAttack", 0.2f);
             }
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+    }
+
+    void ResetAttack()
+    {
+        if (weaponDown)
         {
-            if (weaponDown)
-            {
-                weaponDown = false;
-                weapon.transform.Rotate(0, 0, -90);
-            }
+            weaponDown = false;
+            weapon.transform.Rotate(0, 0, -90);
         }
     }
 

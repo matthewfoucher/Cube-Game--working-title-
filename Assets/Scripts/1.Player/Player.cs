@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Sword"))
         {
-            currentHealth -= 30;
+            currentHealth -= 10;
         }
 
         // If the current health is less than or equal to zero...
