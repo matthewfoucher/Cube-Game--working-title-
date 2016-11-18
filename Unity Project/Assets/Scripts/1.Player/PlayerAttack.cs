@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
         attackTimer = 0;
         coolDown = 1;
         weaponDown = false;
+        weapon.GetComponent<BoxCollider>().enabled = false;
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class PlayerAttack : MonoBehaviour
             if (attackTimer == 0)
             {
                 // Attack();
+                weapon.GetComponent<BoxCollider>().enabled = true;
                 weapon.transform.Rotate(0, 0, 90);
                 attackTimer = coolDown;
                 weaponDown = true;
@@ -45,12 +47,8 @@ public class PlayerAttack : MonoBehaviour
         {
             weaponDown = false;
             weapon.transform.Rotate(0, 0, -90);
+            weapon.GetComponent<BoxCollider>().enabled = false;
         }
-    }
-
-    private void Attack()
-    {
-        
     }
 }
 

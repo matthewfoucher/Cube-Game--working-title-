@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Sword"))
+        if (other.gameObject.CompareTag("PlayerSword"))
         {
             currentHealth -= 30;
         }

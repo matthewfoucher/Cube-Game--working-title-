@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class Seek : MonoBehaviour {
+public class EnemyAttack : MonoBehaviour {
 
 	public float speed = 10.0f;
 
@@ -35,6 +35,7 @@ public class Seek : MonoBehaviour {
         attackTimer = 0;
         coolDown = 2;
         weaponDown = false;
+        weapon.GetComponent<BoxCollider>().enabled = false;
     }
 	
 	// Update is called once per frame
@@ -66,6 +67,7 @@ public class Seek : MonoBehaviour {
             if (attackTimer == 0)
             {
                 // Attack();
+                weapon.GetComponent<BoxCollider>().enabled = true;
                 weapon.transform.Rotate(0, 0, 90);
                 attackTimer = coolDown;
                 weaponDown = true;
@@ -78,6 +80,7 @@ public class Seek : MonoBehaviour {
     {
         if (weaponDown)
         {
+            weapon.GetComponent<BoxCollider>().enabled = false;
             weaponDown = false;
             weapon.transform.Rotate(0, 0, -90);
         }

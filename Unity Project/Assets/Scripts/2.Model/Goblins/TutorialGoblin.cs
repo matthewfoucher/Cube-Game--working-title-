@@ -12,13 +12,13 @@ public class TutorialGoblin : MonoBehaviour
 
     public RawImage box;
     private bool pressed = false;
-    private Seek aggro;
+    private EnemyAttack aggro;
     int dialogueLevel; // Which part of the dialogue we are in.
     // Use this for initialization
     void Start()
     {
         box.gameObject.SetActive(false);
-        aggro = GetComponent<Seek>();
+        aggro = GetComponent<EnemyAttack>();
     }
 
     // Update is called once per frame
