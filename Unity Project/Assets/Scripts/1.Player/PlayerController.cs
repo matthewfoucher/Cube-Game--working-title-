@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public Camera mainCamera;
     private bool pressed;
     private Rigidbody rb;
+    /// <summary>
+    /// A reference to the inventory
+    /// </summary>
+    public Inventory inventory;
 
     void Start()
     {
@@ -64,6 +68,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jumpForce);
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Item") //If we collide with an item that we can pick up
+        {
+            inventory.AddItem(collision.gameObject.GetComponent<Item>()); //Adds the item to the inventory.
+
+            Destroy(collision.gameObject);
         }
     }
 }
