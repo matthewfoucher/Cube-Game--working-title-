@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         pressed = false;
         rb = GetComponent<Rigidbody>();
-        grid.gameObject.SetActive(false);
+        inventory.gameObject.SetActive(false); //instead of grid, inventory cus it actually disables it
     }
 
     void Update()
@@ -31,12 +31,14 @@ public class PlayerController : MonoBehaviour
         {
             if (!pressed)
             {
-                grid.gameObject.SetActive(true);
+                inventory.gameObject.SetActive(true);
+                GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
                 pressed = true;
             }
             else
             {
-                grid.gameObject.SetActive(false);
+                inventory.gameObject.SetActive(false);
+                GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;
                 pressed = false;
             }
 
@@ -55,6 +57,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift)) //why repeat?
         {
             speed = speed / 1.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main Menu");
         }
 			
     }
