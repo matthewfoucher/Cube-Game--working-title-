@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{C305E322-DA0B-B818-1EA2-642DCC3F25AC}") = "Curse of Cubes Unity Project", "Assembly-CSharp.csproj", "{2149E97E-9DA5-0BD9-B0C6-5A4D180DBD3C}"
+EndProject
+Project("{C305E322-DA0B-B818-1EA2-642DCC3F25AC}") = "Curse of Cubes Unity Project", "Assembly-CSharp-Editor.csproj", "{96318ED0-0B32-5F08-6691-26CF1C74E68A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2149E97E-9DA5-0BD9-B0C6-5A4D180DBD3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2149E97E-9DA5-0BD9-B0C6-5A4D180DBD3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2149E97E-9DA5-0BD9-B0C6-5A4D180DBD3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2149E97E-9DA5-0BD9-B0C6-5A4D180DBD3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96318ED0-0B32-5F08-6691-26CF1C74E68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96318ED0-0B32-5F08-6691-26CF1C74E68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96318ED0-0B32-5F08-6691-26CF1C74E68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96318ED0-0B32-5F08-6691-26CF1C74E68A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
