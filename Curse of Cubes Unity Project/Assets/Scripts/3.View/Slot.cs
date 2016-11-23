@@ -65,7 +65,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         get { return items.Peek(); }
     }
 
-    #endregion  
+    #endregion
 
     void Awake()
     {
@@ -92,7 +92,15 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         //Sets the actual size of the txtRect
         txtRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, slotRect.sizeDelta.x);
         txtRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, slotRect.sizeDelta.y);
-	}
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            UseItem();
+        }
+    }
 	
     /// <summary>
     /// Adds a single item to th inventory
@@ -145,9 +153,9 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     /// <summary>
     /// Uses an item on the slot.
     /// </summary>
-    private void UseItem()
+    public void UseItem()
     {
-        if (!IsEmpty) //If there is an item on the slot
+        if (!IsEmpty && (items.Peek().type == ItemType.HEALTH)) //If there is an item on the slot
         {
             items.Pop().Use(); //Removes the top item from the stack and uses it
 

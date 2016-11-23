@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -9,9 +10,9 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
    	//public float jumpForce;
-    public GridLayoutGroup grid;
-    public Camera mainCamera;
-    private bool pressed;
+  //  public GridLayoutGroup grid;
+    //public Camera mainCamera;
+   // private bool pressed;
     private Rigidbody rb;
     /// <summary>
     /// A reference to the inventory
@@ -20,29 +21,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        pressed = false;
+      //  pressed = false;
         rb = GetComponent<Rigidbody>();
-        inventory.gameObject.SetActive(false); //instead of grid, inventory cus it actually disables it
+      //  inventory.gameObject.SetActive(false); //instead of grid, inventory cus it actually disables it
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            if (!pressed)
-            {
-                inventory.gameObject.SetActive(true);
-                GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
-                pressed = true;
-            }
-            else
-            {
-                inventory.gameObject.SetActive(false);
-                GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;
-                pressed = false;
-            }
-
-        }
 
         if (Input.GetKeyDown(KeyCode.BackQuote))
         {
@@ -93,6 +78,13 @@ public class PlayerController : MonoBehaviour
 		*/
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Item") // If we collide with an item that we can pick up 
+        {
+            inventory.AddItem(other.GetComponent<Item>()); // Adds the item to the inventory.
+        }
+    }
 
     private void OnCollisionEnter(Collision collision) //add more item collision detection for each quest item
     {

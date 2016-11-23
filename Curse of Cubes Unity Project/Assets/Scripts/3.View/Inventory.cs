@@ -216,6 +216,8 @@ public class Inventory : MonoBehaviour
 
     private static GameObject playerRef;
 
+    // private Item item;
+
     // Use this for initialization
     void Start()
     {
@@ -232,11 +234,25 @@ public class Inventory : MonoBehaviour
 
         movingSlot = GameObject.Find("MovingSlot").GetComponent<Slot>();
 
+        // item = GetComponent<Item>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GameObject player = GameObject.Find("Player");
+            GameObject slot = GameObject.Find("Slot");
+            if (player.gameObject.GetComponent<Player>().currentHealth != 100)
+            {
+                item.Use();
+                slot.gameObject.GetComponent<Slot>().UseItem();
+            }
+        }
+        */
+
         if (Input.GetMouseButtonUp(0)) //Checks if the user lifted the first mousebutton
         {
             //Removes the selected item from the inventory
@@ -305,11 +321,13 @@ public class Inventory : MonoBehaviour
             {
                 StartCoroutine("FadeOut"); //Close the inventory
                 PutItemBack(); //Put all items we have in our hand back in the inventory
+                //GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;
 
             }
             else//If it isn't open then it's closed and we neeed to fade in
             {
                 StartCoroutine("FadeIn");
+                GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
             }
         }
         if (Input.GetMouseButton(2)) //If we press the middle mouse button
@@ -542,15 +560,15 @@ public class Inventory : MonoBehaviour
                     //Checks if the om the slot is the same type as the item we want to pick up
                     if (tmp.CurrentItem.type == item.type && tmp.IsAvailable) 
                     {
-                        if (!movingSlot.IsEmpty && clicked.GetComponent<Slot>() == tmp.GetComponent<Slot>())
+                        /*if (!movingSlot.IsEmpty && clicked.GetComponent<Slot>() == tmp.GetComponent<Slot>())
                         {
                             continue;
                         }
-                        else
-                        {
+                        else*/
+                        
                             tmp.AddItem(item); //Adds the item to the inventory
                             return true;
-                        }
+                        
                     }
                 }
             }
@@ -825,6 +843,7 @@ public class Inventory : MonoBehaviour
     /// <returns></returns>
     private IEnumerator FadeOut()
     {
+        GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;
         if (!fadingOut) //Checks if we are already fading out
         {
             //Sets the current state

@@ -7,12 +7,14 @@ public class Player : MonoBehaviour {
     public int startingHealth = 100;            // The amount of health the player starts the game with.
     public int currentHealth;                   // The current health the player has.
     bool isDead; // Whether the player is dead.
+    private int healAmount;
 
     // Use this for initialization
     void Start ()
     {
         isDead = false;
         currentHealth = startingHealth;
+        healAmount = 20;
     }
 	
 	// Update is called once per frame
@@ -35,6 +37,23 @@ public class Player : MonoBehaviour {
         {
             currentHealth = 0;
             isDead = true;
+        }
+    }
+
+    // Heals the player when using a health potion. Called by Inventory script.
+    public void Heal()
+    {
+        if (currentHealth == 100) // We don't need to heal. Tell the Inventory script not to delete the health potion.
+        {
+            return;
+        }
+        else
+        {
+            currentHealth += healAmount;
+            if (currentHealth > 100)
+            {
+                currentHealth = 100;
+            }
         }
     }
 }

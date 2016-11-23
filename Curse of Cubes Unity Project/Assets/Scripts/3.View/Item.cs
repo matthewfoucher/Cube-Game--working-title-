@@ -6,6 +6,7 @@ public enum Quality {COMMON,UNCOMMON,RARE,EPIC,LEGENDARY,ARTIFACT}
 
 public class Item : MonoBehaviour 
 {
+
     /// <summary>
     /// The current item type
     /// </summary>
@@ -46,6 +47,7 @@ public class Item : MonoBehaviour
     /// </summary>
     public string description;
 
+
     /// <summary>
     /// Uses the item
     /// </summary>
@@ -53,10 +55,9 @@ public class Item : MonoBehaviour
     {
         switch (type) //Checks which kind of item this is
         {
-            case ItemType.MANA:
-                Debug.Log("I just used a mana potion");
-                break;
             case ItemType.HEALTH:
+                GameObject player = GameObject.Find("Player");
+                player.GetComponent<Player>().Heal();
                 Debug.Log("I just used a health potion");
                 break;
         }
