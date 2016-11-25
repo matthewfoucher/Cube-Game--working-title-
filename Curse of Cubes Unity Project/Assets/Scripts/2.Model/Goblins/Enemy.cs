@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public int startingHealth = 100; // The amount of health the enemy starts the game with.
     public int currentHealth; // The current health the enemy has.
     bool isDead; // Whether the enemy is dead.
-
+    public GameObject health;
 
     // Use this for initialization
     void Start()
@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     {
         if (isDead)
         {
+            Instantiate(health, gameObject.transform.localPosition, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -96,7 +96,7 @@ MonoBehaviour:
   quality: 0
   spriteNeutral: {fileID: 21300000, guid: 1024a7ce5426a134db195813eab41adf, type: 3}
   spriteHighlighted: {fileID: 21300000, guid: f6ac8da45d5394e4f8174edb511d6ab5, type: 3}
-  maxSize: 5
+  maxSize: 20
   strength: 0
   intellect: 0
   agility: 0

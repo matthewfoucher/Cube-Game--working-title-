@@ -323,3 +323,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
+  health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
