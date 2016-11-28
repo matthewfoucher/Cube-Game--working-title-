@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject weapon; // The player's weapon.
-    public float attackTimer; // The remaining time before the player can attack again.
-    public float coolDown; // The total time before the player can attack again.
+    private float attackTimer; // The remaining time before the player can attack again.
+    private float coolDown; // The total time before the player can attack again.
     private bool weaponDown; // Is the weapon in attack position?
     
 
@@ -46,8 +46,8 @@ public class PlayerAttack : MonoBehaviour
         if (weaponDown)
         {
             weaponDown = false;
-            weapon.transform.Rotate(0, 0, -90);
             weapon.GetComponent<BoxCollider>().enabled = false;
+            weapon.transform.Rotate(0, 0, -90);
         }
     }
 }
