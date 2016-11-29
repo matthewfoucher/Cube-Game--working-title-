@@ -78,13 +78,13 @@ public class PlayerController : MonoBehaviour
 		*/
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Item") // If we collide with an item that we can pick up 
         {
             inventory.AddItem(other.GetComponent<Item>()); // Adds the item to the inventory.
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision) //add more item collision detection for each quest item
     {

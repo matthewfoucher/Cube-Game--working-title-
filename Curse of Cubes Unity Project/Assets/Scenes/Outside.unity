@@ -6302,7 +6302,6 @@ GameObject:
   - 23: {fileID: 515931803}
   - 114: {fileID: 515931802}
   - 54: {fileID: 515931801}
-  - 64: {fileID: 515931800}
   - 114: {fileID: 515931799}
   - 114: {fileID: 515931798}
   m_Layer: 0
@@ -6343,19 +6342,6 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
---- !u!64 &515931800
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 64000013141303952, guid: e9a2dfa90137b5b46825d64240b03352,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 515931797}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &515931801
 Rigidbody:
   m_ObjectHideFlags: 0
