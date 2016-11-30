@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6513194}
   - 23: {fileID: 2313194}
   - 114: {fileID: 11413194}
+  - 54: {fileID: 54000012549500194}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Item
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 113194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -55.7, y: -27, z: 112.2}
-  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +76,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113194}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -92,16 +93,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  quality: 3
+  quality: 0
   spriteNeutral: {fileID: 21300000, guid: d86c1d5203f85e94697d6bf1dd7d3680, type: 3}
   spriteHighlighted: {fileID: 21300000, guid: 56706c4262eaf394f84900b3a5a180c4, type: 3}
   maxSize: 1
-  strength: 120
+  strength: 30
   intellect: 0
-  agility: 80
-  stamina: 150
-  itemName: 417765736f6d652053776f7264
-  description: 546869732069732061207665727920617765736f6d652073776f7264
+  agility: 0
+  stamina: 0
+  itemName: Sword
+  description: Basic sword
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -113,3 +114,18 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 113194}
   m_IsPrefabParent: 1
+--- !u!54 &54000012549500194
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113194}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

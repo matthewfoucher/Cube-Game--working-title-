@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum ItemType {MANA, HEALTH, WEAPON};
+public enum ItemType {MANA, HEALTH, WEAPON, WAND, FLOWER, BLOOD};	
 public enum Quality {COMMON,UNCOMMON,RARE,EPIC,LEGENDARY,ARTIFACT}
 
 public class Item : MonoBehaviour 
@@ -153,8 +153,16 @@ public class Item : MonoBehaviour
                 break;
             case ItemType.WEAPON:
                 GetComponent<Renderer>().material.color = Color.green;
-
                 break;
+			case ItemType.WAND:
+				GetComponent<Renderer> ().material.color = Color.blue;
+				break;
+			case ItemType.FLOWER:
+				GetComponent<Renderer> ().material.color = Color.red;
+				break;
+			case ItemType.BLOOD:
+				GetComponent<Renderer> ().material.color = Color.red;
+				break;
         }
     }
 

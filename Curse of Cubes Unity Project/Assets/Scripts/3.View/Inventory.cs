@@ -157,6 +157,12 @@ public class Inventory : MonoBehaviour
     /// </summary>
     public GameObject weapon;
 
+	public GameObject wand;
+
+	public GameObject flower;
+
+	public GameObject blood;
+
     #endregion
 
     #region Collections
