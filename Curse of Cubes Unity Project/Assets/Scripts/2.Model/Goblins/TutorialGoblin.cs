@@ -24,7 +24,7 @@ public class TutorialGoblin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && (aggro.hostile == false))
         {
             GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
             GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;

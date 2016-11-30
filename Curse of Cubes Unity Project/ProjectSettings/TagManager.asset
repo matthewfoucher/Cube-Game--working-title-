@@ -7,6 +7,9 @@ TagManager:
   - Tutorial
   - Sword
   - PlayerSword
+  - Item
+  - Thief
+  - Knight
   layers:
   - Default
   - TransparentFX

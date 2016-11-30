@@ -23,7 +23,7 @@ public class EnemyAttack : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	    if (CompareTag("Tutorial"))
+	    if (CompareTag("Tutorial") || CompareTag("Thief") || CompareTag("Knight"))
 	    {
 	        hostile = false;
 	    }

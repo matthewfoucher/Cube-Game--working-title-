@@ -43,15 +43,15 @@ public class Enemy : MonoBehaviour
             // ... no need to take damage so exit the function.
             return;
 
-        if (other.gameObject.CompareTag("PlayerSword"))
+        if (other.gameObject.CompareTag("PlayerSword")) // If the player's regular sword hits the enemy.
         {
-            currentHealth -= 30;
+            currentHealth -= 30; // Deal 30 damage.
         }
 
-        else
+        /*if (other.gameObject.CompareTag("EpicSword")) // If the player's epic sword hits the enemy.
         {
-            return;
-        }
+            currentHealth -= 9001; // Deal over 9,000 damage.
+        }*/
 
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)
