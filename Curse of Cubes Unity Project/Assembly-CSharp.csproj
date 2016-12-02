@@ -51,12 +51,14 @@
      <Compile Include="Assets\Scripts\1.Player\SmoothMouseLook.cs" />
      <Compile Include="Assets\Scripts\2.Model\Goblins\Enemy.cs" />
      <Compile Include="Assets\Scripts\2.Model\Goblins\TutorialGoblin.cs" />
+     <Compile Include="Assets\Scripts\2.Model\NPCs\Wizard.cs" />
      <Compile Include="Assets\Scripts\3.View\HealthBar.cs" />
      <Compile Include="Assets\Scripts\3.View\Inventory.cs" />
      <Compile Include="Assets\Scripts\3.View\Item.cs" />
      <Compile Include="Assets\Scripts\3.View\MainMenu.cs" />
      <Compile Include="Assets\Scripts\3.View\Slot.cs" />
      <Compile Include="Assets\Scripts\4.Controllers\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\4.Controllers\Quests.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

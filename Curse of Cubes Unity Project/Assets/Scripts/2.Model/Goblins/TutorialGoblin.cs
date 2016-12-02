@@ -4,16 +4,17 @@ using UnityEngine.UI;
 
 public class TutorialGoblin : MonoBehaviour
 {
-    public GameObject player;
-    public Text dialog0;
+    public GameObject player; //So NPC can look at player
 
+	//Dialogue GUI
+    public Text dialog0;
     public Button dialog1;
     public Button dialog2;
-
     public RawImage box;
+
     private bool pressed = false;
     private EnemyAttack aggro;
-    int dialogueLevel; // Which part of the dialogue we are in.
+
     // Use this for initialization
     void Start()
     {
