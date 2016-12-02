@@ -91,7 +91,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Item") //If we collide with an item that we can pick up
         {
             inventory.AddItem(collision.gameObject.GetComponent<Item>()); //Adds the item to the inventory.
-
+            if (collision.gameObject.GetComponent<Item>().type == ItemType.WAND)
+            {
+                Quests.wandquest++; //quest is incremented 0 to 1
+            }
             Destroy(collision.gameObject);
         }
     }

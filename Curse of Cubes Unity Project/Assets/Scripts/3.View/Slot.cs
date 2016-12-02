@@ -96,10 +96,11 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q)) //heals player, and uses up one health potion by pressing Q
         {
             UseItem();
         }
+
     }
 	
     /// <summary>
@@ -116,6 +117,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         }
 
         ChangeSprite(item.spriteNeutral, item.spriteHighlighted); //Changes the sprite so that it reflects the item the slot is occupied by
+
     }
 
     /// <summary>

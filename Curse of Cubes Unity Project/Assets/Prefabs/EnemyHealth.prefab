@@ -25,7 +25,7 @@ GameObject:
   - 114: {fileID: 114000010874885478}
   - 54: {fileID: 54000013574175946}
   m_Layer: 0
-  m_Name: Health
+  m_Name: EnemyHealth
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

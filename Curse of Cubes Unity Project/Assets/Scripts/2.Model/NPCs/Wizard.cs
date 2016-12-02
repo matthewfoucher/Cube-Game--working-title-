@@ -11,41 +11,60 @@ public class Wizard : MonoBehaviour {
 	public Button dialog2;
 	public RawImage box;
 
-	private bool pressed = false;
+    //private bool pressed = false;
 
-	// Use this for initialization
-	void Start () {
+    private bool complete; //quest complete? wizard will stop talking to player if done
+    // Use this for initialization
+    void Start () {
 		box.gameObject.SetActive(false);
+        complete = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.E))
+		if (Input.GetKeyDown(KeyCode.E) && complete == false)
 		{
-			GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
+            /*
+            GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
 			GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
 			GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
-
+            */
 			float distance = Vector3.Distance(transform.position, player.transform.position);
 			if (distance <= 5.0f)
 			{
-				pressed = true;
-				transform.LookAt(player.transform);
+                
+                GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
+                GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+                GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
+                
+                //pressed = true;
+                transform.LookAt(player.transform);
 				box.gameObject.SetActive(true);
 				dialog0.gameObject.SetActive(true);
-				dialog1.gameObject.SetActive(false);
-				dialog2.gameObject.SetActive(true);
+                dialog1.gameObject.SetActive(false);
+                dialog2.gameObject.SetActive(true);
+                dialog2.onClick.RemoveAllListeners();
 
-				dialog0.text = "My goodness sir, you're a cube! Just like me! How may I assist you?";
-				dialog2.GetComponentInChildren<Text>().text = "Where can I find the dragon?";
+                dialog0.text = "My goodness sir, you're a cube! Just like me! How may I assist you?";
+                
+                if (Quests.wandquest == 1)
+                {
+                    dialog2.GetComponentInChildren<Text>().text = "Heres your wand... went through a lot of trouble to get it.";
 
-				dialog2.onClick.AddListener(FindWand);
+                    dialog2.onClick.AddListener(Splendid);
+                }
+                else
+                {
+                    dialog2.GetComponentInChildren<Text>().text = "Where can I find the dragon?";
+
+                    dialog2.onClick.AddListener(FindWand);
+                }
 			}
-			else if (pressed == true)
+			/*else if (pressed == true)
 			{
 				pressed = false;
-				box.gameObject.SetActive(false);
-			}
+                box.gameObject.SetActive(false);
+			}*/
 		}
 	}
 
@@ -67,14 +86,35 @@ public class Wizard : MonoBehaviour {
 		dialog2.onClick.AddListener(SeeYou);
 	}
 
-	void SeeYou()
+	void SeeYou() //exits dialogue
 	{
-		box.gameObject.SetActive(false);
-		dialog0.gameObject.SetActive(false);
+        dialog0.gameObject.SetActive(false);
+        dialog2.gameObject.SetActive(false);
+        box.gameObject.SetActive(false);
 
-		GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = true;
+        GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = true;
 		GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
 		GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;
 	}
+
+    void Splendid()
+    {
+        dialog0.text = "Splendid! Now be about your way I have wizard things to do.";
+        dialog2.GetComponentInChildren<Text>().text = "Wait, weren't you gonna help me fight the dragon?";
+
+        dialog2.onClick.RemoveAllListeners();
+        dialog2.onClick.AddListener(Err);
+    }
+
+    void Err()
+    {
+        dialog0.text = "Oh. Er. Uh. You got me... I am sorry sir, but I can not. I have lied to you, a wizard trick. I can not, in fact, use magic at all in this cube form. I wanted my wand back for its sentimental value.\n\nYou are on your own sir. But maybe... maybe the Dovahkiid can help you. He's somewhere in that cave. May the gods shine on you.";
+        dialog2.GetComponentInChildren<Text>().text = "So I just did a pointless fetchquest for a wizard... Great.";
+
+        complete = true;
+
+        dialog2.onClick.RemoveAllListeners();
+        dialog2.onClick.AddListener(SeeYou);
+    }
 }
 

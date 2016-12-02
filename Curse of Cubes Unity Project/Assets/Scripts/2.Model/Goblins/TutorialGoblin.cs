@@ -27,13 +27,18 @@ public class TutorialGoblin : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && (aggro.hostile == false))
         {
+            /*
             GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
             GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
             GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
-
+            */
             float distance = Vector3.Distance(transform.position, player.transform.position);
             if (distance <= 5.0f)
             {
+                GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
+                GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+                GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
+
                 pressed = true;
                 transform.LookAt(player.transform);
                 box.gameObject.SetActive(true);
