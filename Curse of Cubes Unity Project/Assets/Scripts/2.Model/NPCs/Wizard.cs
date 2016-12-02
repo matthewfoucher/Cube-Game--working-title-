@@ -49,6 +49,8 @@ public class Wizard : MonoBehaviour {
                 
                 if (Quests.wandquest == 1)
                 {
+					Quests.wandquest++; //1 to 2
+
                     dialog2.GetComponentInChildren<Text>().text = "Heres your wand... went through a lot of trouble to get it.";
 
                     dialog2.onClick.AddListener(Splendid);

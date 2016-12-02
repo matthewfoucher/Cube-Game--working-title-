@@ -60,6 +60,21 @@ public class Item : MonoBehaviour
                 player.GetComponent<Player>().Heal();
                 Debug.Log("I just used a health potion");
                 break;
+			case ItemType.WAND: 
+				Debug.Log("Wand quest complete");
+				break;
+			case ItemType.BLOOD:
+				Debug.Log("Blood given.");
+				break;
+			case ItemType.FLOWER:
+				Debug.Log("Flower given.");
+				break;
+			case ItemType.MANA:
+				Debug.Log("Magic potion given.");
+				break;
+			case ItemType.WEAPON:
+				Debug.Log("Removing normal sword, to give epic sword.");
+				break;
         }
 
     }

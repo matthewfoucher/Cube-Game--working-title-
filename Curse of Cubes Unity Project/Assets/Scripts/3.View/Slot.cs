@@ -98,9 +98,13 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     {
         if (Input.GetKeyDown(KeyCode.Q)) //heals player, and uses up one health potion by pressing Q
         {
-            UseItem();
+			UsePotion();
         }
 
+		if (Quests.wandquest == 2) //wand quest complete, removing wand item
+		{
+			RemoveWand ();
+		}
     }
 	
     /// <summary>
@@ -152,9 +156,45 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         GetComponent<Button>().spriteState = st;
     }
 
+	public void UsePotion()
+	{
+		if (!IsEmpty && (items.Peek().type == ItemType.HEALTH)) //If there is an item on the slot
+		{
+			items.Pop().Use(); //Removes the top item from the stack and uses it
+
+			stackTxt.text = items.Count > 1 ? items.Count.ToString() : string.Empty; //Writes the correct stack number on the icon
+
+			if (IsEmpty) //Checks if we just removed the last item from the inventory
+			{
+				ChangeSprite(slotEmpty, slotHighlight); //Changes the sprite to empty if the slot is empty
+
+				Inventory.EmptySlots++; //Adds 1 to the amount of empty slots
+			}
+		}
+	}
+
+	public void RemoveWand()
+	{
+		if (!IsEmpty && (items.Peek().type == ItemType.WAND)) //If there is an item on the slot
+		{
+			items.Pop().Use(); //Removes the top item from the stack and uses it
+
+			stackTxt.text = items.Count > 1 ? items.Count.ToString() : string.Empty; //Writes the correct stack number on the icon
+
+			if (IsEmpty) //Checks if we just removed the last item from the inventory
+			{
+				ChangeSprite(slotEmpty, slotHighlight); //Changes the sprite to empty if the slot is empty
+
+				Inventory.EmptySlots++; //Adds 1 to the amount of empty slots
+			}
+		}
+	}
+
+
     /// <summary>
     /// Uses an item on the slot.
     /// </summary>
+	/*
     public void UseItem()
     {
         if (!IsEmpty && (items.Peek().type == ItemType.HEALTH)) //If there is an item on the slot
@@ -171,7 +211,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
             }
         }
     }
-
+*/
     /// <summary>
     /// Clears the slot
     /// </summary>
@@ -236,7 +276,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         if (eventData.button == PointerEventData.InputButton.Right && !GameObject.Find("Hover") && Inventory.CanvasGroup.alpha > 0)
         {
             //Uses an item on the slot
-            UseItem();
+           // UseItem();
         }
         //Checks if we need to show the split stack dialog , this is only done if we shiftclick a slot and we aren't moving an item
         else if (eventData.button == PointerEventData.InputButton.Left && Input.GetKey(KeyCode.LeftShift) && !IsEmpty && !GameObject.Find("Hover"))
