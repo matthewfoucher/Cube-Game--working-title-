@@ -48,10 +48,10 @@ public class Enemy : MonoBehaviour
             currentHealth -= 30; // Deal 30 damage.
         }
 
-        /*if (other.gameObject.CompareTag("EpicSword")) // If the player's epic sword hits the enemy.
+        if (other.gameObject.CompareTag("EpicSword")) // If the player's epic sword hits the enemy.
         {
             currentHealth -= 9001; // Deal over 9,000 damage.
-        }*/
+        }
 
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)

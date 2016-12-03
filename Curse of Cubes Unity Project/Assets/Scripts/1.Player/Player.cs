@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
     {
         isDead = false;
         currentHealth = startingHealth;
-        healAmount = 20;
+        healAmount = 40;
     }
 	
 	// Update is called once per frame

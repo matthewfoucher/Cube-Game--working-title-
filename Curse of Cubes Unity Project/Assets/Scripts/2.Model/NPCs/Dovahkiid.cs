@@ -41,12 +41,12 @@ public class Dovahkiid : MonoBehaviour
                 dialog1.onClick.RemoveAllListeners();
                 dialog2.onClick.RemoveAllListeners();
 
-                dialog0.text = "Hello mister. I am the Dovahkiid. The kid of legend, destined to slay the dragon. Just one small problem, I got lost in this cave! Would you by any chance know the directions to him?";
+                dialog0.text = "Hello, mister. I am the Dovahkiid. The kid of legend, destined to slay the dragon. Just one small problem, I got lost in this cave! Would you by any chance know the directions to him?";
 
                 dialog1.GetComponentInChildren<Text>().text = "The dragon's that way.";
                 dialog1.onClick.AddListener(ThankYou);
 
-                dialog2.GetComponentInChildren<Text>().text = "Hey, this is a strange question but could I have a sample of your blood?";
+                dialog2.GetComponentInChildren<Text>().text = "Hey, this is a strange question, but could I have a sample of your blood?";
                 dialog2.onClick.AddListener(Huh);
             }
         }
@@ -54,7 +54,7 @@ public class Dovahkiid : MonoBehaviour
 
     void ThankYou()
     {
-        dialog0.text = "Oh thank you mister. Say... if you are going try and fight the dragon as well I hope we can have some jolly cooperation!See you there!";
+        dialog0.text = "Oh thank you, mister. Say... if you are going try and fight the dragon as well, I hope we can have some jolly cooperation! See you there!";
         dialog1.GetComponentInChildren<Text>().text = "Let's kick some dragon ASS!";
 
         Quests.dovahkiid = 3; //3 is jolly coop
@@ -65,7 +65,7 @@ public class Dovahkiid : MonoBehaviour
 
     void Huh()
     {
-        dialog0.text = "Huh, that is a strange question mister. But as the Savoir of the Cubes I will trust you have good intent. Here. (The mini cube draws blood)";
+        dialog0.text = "Huh, that is a strange question, mister. But as the Savior of the Cubes, I will trust that you have good intent. Here. (The mini-cube draws blood.)";
         Quests.dovahkiid++; //0 to 1
         dialog1.GetComponentInChildren<Text>().text = "Thanks, I needed it.";
         dialog2.gameObject.SetActive(false);

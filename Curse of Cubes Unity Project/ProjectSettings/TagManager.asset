@@ -10,6 +10,7 @@ TagManager:
   - Item
   - Thief
   - Knight
+  - EpicSword
   layers:
   - Default
   - TransparentFX

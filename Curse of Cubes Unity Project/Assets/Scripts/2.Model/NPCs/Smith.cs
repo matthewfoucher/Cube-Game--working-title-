@@ -43,7 +43,7 @@ public class Smith : MonoBehaviour
                 dialog2.onClick.RemoveAllListeners();
                 if (complete < 3)//if the player is doing the fetch quest
                 {
-                    dialog0.text = "Morn' pal. This is me smith.";
+                    dialog0.text = "Morn' pal. This is me, Smith.";
                     if (Quests.magic == true && Quests.blood == true) //if the player is holding both flower and blood
                     {
                         dialog2.gameObject.SetActive(true);
@@ -80,11 +80,11 @@ public class Smith : MonoBehaviour
                 }
                 else //if the player completed the fetch quest
                 {
-                    dialog0.text = "Praise be ta tha gods! With this sword, ye can be able to slay the dragon! Tha dovahkiid failed us, so me dub ye a new savior. Ye be the Dovahkube!";
+                    dialog0.text = "Praise be ta tha gods! With this sword, ye can be able to slay the dragon! Tha Dovahkiid failed us, so me dub ye a new savior. Ye be the Dovahkube!";
                     Quests.epicswordquest = 4; //removes sword, gives player epic sword
                     complete++;
                     dialog2.gameObject.SetActive(true);
-                    dialog2.GetComponentInChildren<Text>().text = "Thank you, I the Dovahkube will not disappoint you.";
+                    dialog2.GetComponentInChildren<Text>().text = "Thank you, I, the Dovahkube, will not disappoint you.";
                     dialog2.onClick.AddListener(Sure);
                 }
             }
@@ -93,7 +93,7 @@ public class Smith : MonoBehaviour
 
     void HeBe()
     {
-        dialog0.text = "He be in tha cave right over yonder. But findin' em ain't be tha hard part. Ay, you would be smart to come prepared. Tha sword ye be holdin' there wouldn't leave a scratch!";
+        dialog0.text = "He be in tha cave right over yonder. But findin' 'im ain't be tha hard part. Ay, you would be smart to come prepared. Tha sword ye be holdin' there wouldn't leave a scratch!";
         dialog2.GetComponentInChildren<Text>().text = "How do I hurt the dragon?";
 
         dialog2.onClick.RemoveAllListeners();
@@ -103,7 +103,7 @@ public class Smith : MonoBehaviour
     void Luckily()
     {
         dialog0.text = "Luckily ye be talkin' to the best smith in tha land! I can forge an epic sword that'll smack the scales off tha dragon's behind! But only if ye be willin' ta find me tha materials.";
-        dialog2.GetComponentInChildren<Text>().text = "Sure I'll look for them.";
+        dialog2.GetComponentInChildren<Text>().text = "Sure, I'll look for them.";
 
         dialog2.onClick.RemoveAllListeners();
         dialog2.onClick.AddListener(Sure);
