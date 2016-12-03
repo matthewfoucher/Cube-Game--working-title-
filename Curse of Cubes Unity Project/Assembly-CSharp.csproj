@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\1.Player\SmoothMouseLook.cs" />
      <Compile Include="Assets\Scripts\2.Model\Goblins\Enemy.cs" />
      <Compile Include="Assets\Scripts\2.Model\Goblins\TutorialGoblin.cs" />
+     <Compile Include="Assets\Scripts\2.Model\NPCs\Dovahkiid.cs" />
+     <Compile Include="Assets\Scripts\2.Model\NPCs\Smith.cs" />
      <Compile Include="Assets\Scripts\2.Model\NPCs\Wizard.cs" />
      <Compile Include="Assets\Scripts\3.View\HealthBar.cs" />
      <Compile Include="Assets\Scripts\3.View\Inventory.cs" />

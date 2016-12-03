@@ -123,9 +123,9 @@ MonoBehaviour:
   spriteNeutral: {fileID: 21300000, guid: d86c1d5203f85e94697d6bf1dd7d3680, type: 3}
   spriteHighlighted: {fileID: 21300000, guid: 56706c4262eaf394f84900b3a5a180c4, type: 3}
   maxSize: 1
-  strength: 999999
-  intellect: 69
-  agility: 420
-  stamina: 80085
+  strength: 9001
+  intellect: 0
+  agility: 0
+  stamina: 0
   itemName: Epic Sword
-  description: This is a fuckin' awesome quest sword!!!
+  description: Fucking EPIC!

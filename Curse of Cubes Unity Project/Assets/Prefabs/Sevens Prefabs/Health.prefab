@@ -100,7 +100,7 @@ MonoBehaviour:
   strength: 0
   intellect: 0
   agility: 0
-  stamina: 0
+  stamina: 40
   itemName: Health Potion
   description: Heals the player.
 --- !u!1001 &100100000

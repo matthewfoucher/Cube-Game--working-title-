@@ -120,12 +120,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   quality: 0
-  spriteNeutral: {fileID: 21300000, guid: 9799d399112db1548a64b9f483b7a2ff, type: 3}
-  spriteHighlighted: {fileID: 21300000, guid: eb819b5ec4a2c104291bfb38546a7609, type: 3}
+  spriteNeutral: {fileID: 21300000, guid: 1024a7ce5426a134db195813eab41adf, type: 3}
+  spriteHighlighted: {fileID: 21300000, guid: f6ac8da45d5394e4f8174edb511d6ab5, type: 3}
   maxSize: 1
-  strength: 9999
-  intellect: 9999
-  agility: 9999
-  stamina: 9999
+  strength: 9001
+  intellect: 0
+  agility: 0
+  stamina: 0
   itemName: Blood
-  description: The blood of the dovahkiid.
+  description: Dovahkiid's blood.
