@@ -47,8 +47,9 @@ public class EnemyAttack : MonoBehaviour {
             attackTimer = 0;
 
         Debug.Log (target.position);
-		if ((((Vector3.Distance(transform.position, target.position) < aggro_dis) || (CompareTag("Knight") || CompareTag("Thief"))) && (Vector3.Distance (transform.position, target.position) > min_dis)) && (hostile)) 
-		{
+		if (((Vector3.Distance(transform.position, target.position) < aggro_dis) && (Vector3.Distance (transform.position, target.position) > min_dis)) && (hostile))
+        //if ((((Vector3.Distance(transform.position, target.position) < aggro_dis) || (CompareTag("Knight") || CompareTag("Thief"))) && (Vector3.Distance (transform.position, target.position) > min_dis)) && (hostile))
+        {
             /*Rotate to the target point
 			Quaternion targetRotation = Quaternion.LookRotation(target.position - transform.position);		
 			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotSpeed); 
