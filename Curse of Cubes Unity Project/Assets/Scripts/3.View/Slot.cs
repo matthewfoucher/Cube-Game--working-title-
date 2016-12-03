@@ -105,6 +105,23 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 		{
 			RemoveWand ();
 		}
+
+        if (Quests.epicswordquest == 1)
+        {
+            RemoveFlower();
+        }
+        if (Quests.epicswordquest == 2)
+        {
+            RemoveMagic();
+        }
+        if (Quests.epicswordquest == 3)
+        {
+            RemoveBlood();
+        }
+        if (Quests.epicswordquest == 4)
+        {
+            RemoveSword();
+        }
     }
 	
     /// <summary>
@@ -190,6 +207,73 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 		}
 	}
 
+    public void RemoveFlower()
+    {
+        if (!IsEmpty && (items.Peek().type == ItemType.FLOWER)) //If there is an item on the slot
+        {
+            items.Pop().Use(); //Removes the top item from the stack and uses it
+
+            stackTxt.text = items.Count > 1 ? items.Count.ToString() : string.Empty; //Writes the correct stack number on the icon
+
+            if (IsEmpty) //Checks if we just removed the last item from the inventory
+            {
+                ChangeSprite(slotEmpty, slotHighlight); //Changes the sprite to empty if the slot is empty
+
+                Inventory.EmptySlots++; //Adds 1 to the amount of empty slots
+            }
+        }
+    }
+
+    public void RemoveMagic()
+    {
+        if (!IsEmpty && (items.Peek().type == ItemType.MANA)) //If there is an item on the slot
+        {
+            items.Pop().Use(); //Removes the top item from the stack and uses it
+
+            stackTxt.text = items.Count > 1 ? items.Count.ToString() : string.Empty; //Writes the correct stack number on the icon
+
+            if (IsEmpty) //Checks if we just removed the last item from the inventory
+            {
+                ChangeSprite(slotEmpty, slotHighlight); //Changes the sprite to empty if the slot is empty
+
+                Inventory.EmptySlots++; //Adds 1 to the amount of empty slots
+            }
+        }
+    }
+
+    public void RemoveBlood()
+    {
+        if (!IsEmpty && (items.Peek().type == ItemType.BLOOD)) //If there is an item on the slot
+        {
+            items.Pop().Use(); //Removes the top item from the stack and uses it
+
+            stackTxt.text = items.Count > 1 ? items.Count.ToString() : string.Empty; //Writes the correct stack number on the icon
+
+            if (IsEmpty) //Checks if we just removed the last item from the inventory
+            {
+                ChangeSprite(slotEmpty, slotHighlight); //Changes the sprite to empty if the slot is empty
+
+                Inventory.EmptySlots++; //Adds 1 to the amount of empty slots
+            }
+        }
+    }
+
+    public void RemoveSword()
+    {
+        if (!IsEmpty && (items.Peek().type == ItemType.WEAPON)) //If there is an item on the slot
+        {
+            items.Pop().Use(); //Removes the top item from the stack and uses it
+
+            stackTxt.text = items.Count > 1 ? items.Count.ToString() : string.Empty; //Writes the correct stack number on the icon
+
+            if (IsEmpty) //Checks if we just removed the last item from the inventory
+            {
+                ChangeSprite(slotEmpty, slotHighlight); //Changes the sprite to empty if the slot is empty
+
+                Inventory.EmptySlots++; //Adds 1 to the amount of empty slots
+            }
+        }
+    }
 
     /// <summary>
     /// Uses an item on the slot.

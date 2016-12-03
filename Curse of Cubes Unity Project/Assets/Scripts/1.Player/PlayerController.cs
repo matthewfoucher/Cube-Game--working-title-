@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public Inventory inventory;
 
+    public GameObject blood;
+    public GameObject epicsword;
+
     void Start()
     {
       //  pressed = false;
@@ -48,7 +51,18 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("Main Menu");
         }
-			
+
+        if (Quests.blood == true)
+        {
+            Instantiate(blood, gameObject.transform.position, Quaternion.identity); //give player blood item
+        }
+
+        if (Quests.epicswordquest == 4)
+        {
+            Instantiate(epicsword, gameObject.transform.position, Quaternion.identity); //give player epic sword
+            Quests.epicswordquest = 5;
+        }
+
     }
 
     void FixedUpdate()
@@ -94,6 +108,19 @@ public class PlayerController : MonoBehaviour
             if (collision.gameObject.GetComponent<Item>().type == ItemType.WAND)
             {
                 Quests.wandquest++; //quest is incremented 0 to 1
+            }
+
+            if (collision.gameObject.GetComponent<Item>().type == ItemType.FLOWER) //picking up flower
+            {
+                Quests.flower = true;
+            }
+            if (collision.gameObject.GetComponent<Item>().type == ItemType.MANA) //picking up magic
+            {
+                Quests.magic = true;
+            }
+            if(collision.gameObject.GetComponent<Item>().type == ItemType.BLOOD) //picking up blood
+            {
+                Quests.blood = true;
             }
             Destroy(collision.gameObject);
         }
