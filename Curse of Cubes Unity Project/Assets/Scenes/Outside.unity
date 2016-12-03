@@ -14118,8 +14118,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 279, y: -50}
-  m_SizeDelta: {x: 600, y: 500}
+  m_AnchoredPosition: {x: 279, y: -52.249992}
+  m_SizeDelta: {x: 600, y: 546.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1183722311
 MonoBehaviour:
@@ -20169,6 +20169,7 @@ GameObject:
   - 23: {fileID: 1654412407}
   - 54: {fileID: 1654412405}
   - 114: {fileID: 1654412406}
+  - 114: {fileID: 1654412411}
   m_Layer: 0
   m_Name: Dovahkiid
   m_TagString: Untagged
@@ -20261,11 +20262,27 @@ Transform:
   m_GameObject: {fileID: 1654412404}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 28.97, y: 7.8, z: -352.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
   m_Children: []
   m_Father: {fileID: 2083772925}
   m_RootOrder: 4
+--- !u!114 &1654412411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654412404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ced35f95313d374f88349dba87c0396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 497626670}
+  dialog0: {fileID: 1658861560}
+  dialog1: {fileID: 1434438376}
+  dialog2: {fileID: 187351765}
+  box: {fileID: 1183722311}
 --- !u!1001 &1655695025
 Prefab:
   m_ObjectHideFlags: 0

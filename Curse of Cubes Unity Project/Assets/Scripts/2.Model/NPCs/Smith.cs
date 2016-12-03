@@ -34,7 +34,6 @@ public class Smith : MonoBehaviour
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
                 GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
 
-                //pressed = true;
                 transform.LookAt(player.transform);
                 box.gameObject.SetActive(true);
                 dialog0.gameObject.SetActive(true);
@@ -44,7 +43,7 @@ public class Smith : MonoBehaviour
                 dialog2.onClick.RemoveAllListeners();
                 if (complete < 3)//if the player is doing the fetch quest
                 {
-                    dialog0.text = "Morn' pal. This is me smith";
+                    dialog0.text = "Morn' pal. This is me smith.";
                     if (Quests.magic == true && Quests.blood == true) //if the player is holding both flower and blood
                     {
                         dialog2.gameObject.SetActive(true);

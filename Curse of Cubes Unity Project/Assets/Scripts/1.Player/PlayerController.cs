@@ -52,9 +52,10 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Main Menu");
         }
 
-        if (Quests.blood == true)
+        if (Quests.dovahkiid == 1)
         {
             Instantiate(blood, gameObject.transform.position, Quaternion.identity); //give player blood item
+            Quests.dovahkiid++; //1 to 2, 2 means no coop
         }
 
         if (Quests.epicswordquest == 4)
