@@ -6300,6 +6300,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
+  otherOne: {fileID: 0}
 --- !u!54 &515931801
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7854,6 +7855,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
+  otherOne: {fileID: 0}
 --- !u!54 &697543576
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13386,7 +13388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -13398,11 +13400,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_RootOrder
@@ -13422,7 +13424,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13431,6 +13433,10 @@ Prefab:
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
+      propertyPath: m_TagString
+      value: Sword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
@@ -13453,7 +13459,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8, y: 1, z: 1}
+  m_Size: {x: 16, y: 1, z: 1}
   m_Center: {x: -3.7, y: 0, z: 0}
 --- !u!4 &1133778536 stripped
 Transform:
@@ -19559,6 +19565,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
+  otherOne: {fileID: 2107758644}
 --- !u!23 &1614017889
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19613,10 +19620,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1614017886}
-  m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 52.98, y: 7.8, z: -72.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1132838896}
   m_Father: {fileID: 2083772925}
@@ -20333,6 +20340,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
+  otherOne: {fileID: 0}
 --- !u!23 &1654412407
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24248,6 +24256,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
+  otherOne: {fileID: 0}
 --- !u!23 &1949227217
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25636,6 +25645,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
+  otherOne: {fileID: 0}
 --- !u!23 &2099125251
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25843,6 +25853,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000011118031102, guid: 2b9d037666c6ea24281f9d6f1eebe404, type: 2}
+  otherOne: {fileID: 1614017886}
 --- !u!23 &2107758647
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26314,11 +26325,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_RootOrder
@@ -26330,7 +26341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -26347,6 +26358,10 @@ Prefab:
     - target: {fileID: 400004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
+      propertyPath: m_TagString
+      value: Sword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29862b5916c869d479b723f1c4d6a1a9, type: 3}
@@ -26370,4 +26385,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8, y: 1, z: 1}
-  m_Center: {x: -3, y: 0, z: 0}
+  m_Center: {x: -3, y: -2, z: 0}

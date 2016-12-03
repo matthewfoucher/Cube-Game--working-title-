@@ -7,6 +7,10 @@ public class Enemy : MonoBehaviour
     public int currentHealth; // The current health the enemy has.
     bool isDead; // Whether the enemy is dead.
     public GameObject health;
+    private EnemyAttack aggro; // This will enable the enemy attack script for the thief or the knight when one is attacked.
+    private EnemyAttack aggroAlly; // This will enable the enemy attack script ally of the thief or the knight.
+    public GameObject otherOne; // The game object reference to the ally of the thief or the knight.
+    private bool notAttacked; // If the thief/knight has not been attacked yet, this is true.
 
     // Use this for initialization
     void Start()
@@ -14,27 +18,8 @@ public class Enemy : MonoBehaviour
         isDead = false; // Enemy is alive.
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
+        notAttacked = true;
     }
-
-    public void TakeDamage(int amount)
-    {
-        // If the enemy is dead...
-        if (isDead)
-            // ... no need to take damage so exit the function.
-            return;
-
-
-        // Reduce the current health by the amount of damage sustained.
-        currentHealth -= amount;
-
-
-        // If the current health is less than or equal to zero...
-        if (currentHealth <= 0)
-        {
-            isDead = true;
-        }
-    }
-
 
     void OnTriggerEnter(Collider other)
     {
@@ -42,6 +27,15 @@ public class Enemy : MonoBehaviour
         if (isDead)
             // ... no need to take damage so exit the function.
             return;
+
+        if ((CompareTag("Knight") || CompareTag("Thief")) && notAttacked) // If either the knight or the thief is attacked:
+        {
+            aggro = GetComponent<EnemyAttack>(); // Get the Enemy Attack script attached to the NPC that got attacked.
+            aggroAlly = otherOne.GetComponent<EnemyAttack>(); // Get the Enemy Attack script for the other NPC.
+            aggro.hostile = true; // The attacked NPC becomes hostile.
+            aggroAlly.hostile = true; // The NPC's ally becomes hostile.
+            notAttacked = false;
+        }
 
         if (other.gameObject.CompareTag("PlayerSword")) // If the player's regular sword hits the enemy.
         {
@@ -56,9 +50,9 @@ public class Enemy : MonoBehaviour
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)
         {
-            isDead = true;
-            Instantiate(health, gameObject.transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            isDead = true; // The enemy is now dead.
+            Instantiate(health, gameObject.transform.position, Quaternion.identity); // Drop a health potion.
+            Destroy(gameObject); // Destroy the enemy's game object.
         }
     }
 }
