@@ -38,8 +38,8 @@ public class Peasant : MonoBehaviour
                 dialog2.onClick.RemoveAllListeners();
 
                 dialog0.text = "Oh look another cube.";
-                dialog1.GetComponentInChildren<Text>().text = "";
-                dialog2.GetComponentInChildren<Text>().text = "";
+                dialog1.GetComponentInChildren<Text>().text = "Where's the dragon?";
+                dialog2.GetComponentInChildren<Text>().text = "Okay, what the hell is going on in this game?";
 
                 dialog1.onClick.AddListener(funny1);
                 dialog2.onClick.AddListener(funny2);
@@ -60,8 +60,9 @@ public class Peasant : MonoBehaviour
 
     void funny1()
     {
-        dialog0.text = "";
-        dialog1.GetComponentInChildren<Text>().text = "";
+        dialog2.gameObject.SetActive(false);
+        dialog0.text = "He's over in the cave. But I think we should be more worried about the other cubes. I mean, they're all cubes with weird hats. How can we even know who they are?";
+        dialog1.GetComponentInChildren<Text>().text = "Yeah, I guess the developers were pretty lazy.";
 
         dialog1.onClick.RemoveAllListeners();
         dialog1.onClick.AddListener(Leave);
@@ -69,8 +70,9 @@ public class Peasant : MonoBehaviour
 
     void funny2()
     {
-        dialog0.text = "";
-        dialog2.GetComponentInChildren<Text>().text = "";
+        dialog1.gameObject.SetActive(false);
+        dialog0.text = "You know, it's a school project where you fight a dragon. There are a bunch of stupid jokes and a lot of unoptimized code.";
+        dialog2.GetComponentInChildren<Text>().text = "Sounds about right.";
 
         dialog2.onClick.RemoveAllListeners();
         dialog2.onClick.AddListener(Leave);

@@ -37,7 +37,7 @@ public class Knight : MonoBehaviour {
                 dialog0.text = "Excuse you, I am busy on guard duty. Do not disturb me.";
                 if (Quests.thieves == 2)
                 {
-                    dialog1.GetComponentInChildren<Text>().text = "There's this shady cube hanging around in the forest, you should problem check on that.";
+                    dialog1.GetComponentInChildren<Text>().text = "There's this shady cube hanging around in the forest, you should probably check on that.";
 
                     dialog1.onClick.AddListener(NoWorry);
                 }
