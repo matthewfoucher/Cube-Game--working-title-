@@ -125,6 +125,8 @@ public class SmoothMouseLook : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked; //keeps mouse at center of screen
+
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb)
             rb.freezeRotation = true;

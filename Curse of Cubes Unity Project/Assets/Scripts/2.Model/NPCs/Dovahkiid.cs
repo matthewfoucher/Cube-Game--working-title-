@@ -28,7 +28,7 @@ public class Dovahkiid : MonoBehaviour
             float distance = Vector3.Distance(transform.position, player.transform.position);
             if (distance <= 5.0f)
             {
-
+                Cursor.lockState = CursorLockMode.None;
                 GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
                 GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
@@ -78,7 +78,7 @@ public class Dovahkiid : MonoBehaviour
         dialog0.gameObject.SetActive(false);
         dialog2.gameObject.SetActive(false);
         box.gameObject.SetActive(false);
-
+        Cursor.lockState = CursorLockMode.Locked;
         complete = true; //either the player gets the blood or coop
 
         GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = true;

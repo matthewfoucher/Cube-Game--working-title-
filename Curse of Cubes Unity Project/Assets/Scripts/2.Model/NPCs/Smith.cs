@@ -29,7 +29,7 @@ public class Smith : MonoBehaviour
             float distance = Vector3.Distance(transform.position, player.transform.position);
             if (distance <= 5.0f)
             {
-
+                Cursor.lockState = CursorLockMode.None;
                 GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
                 GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
@@ -115,7 +115,7 @@ public class Smith : MonoBehaviour
         dialog1.gameObject.SetActive(false);
         dialog2.gameObject.SetActive(false);
         box.gameObject.SetActive(false);
-
+        Cursor.lockState = CursorLockMode.Locked;
         GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = true;
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
         GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;

@@ -325,6 +325,7 @@ public class Inventory : MonoBehaviour
         {
             if (canvasGroup.alpha > 0) //If our inventory is visible, then we know that it is open
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 StartCoroutine("FadeOut"); //Close the inventory
                 PutItemBack(); //Put all items we have in our hand back in the inventory
                 //GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;
@@ -332,6 +333,7 @@ public class Inventory : MonoBehaviour
             }
             else//If it isn't open then it's closed and we neeed to fade in
             {
+                Cursor.lockState = CursorLockMode.None;
                 StartCoroutine("FadeIn");
                 GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
             }
