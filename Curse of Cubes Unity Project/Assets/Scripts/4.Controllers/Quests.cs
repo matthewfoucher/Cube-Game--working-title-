@@ -6,6 +6,7 @@ public class Quests : MonoBehaviour {
     public static int wandquest; //once it reaches level 1, the quest is complete
     public static int epicswordquest;
     public static int dovahkiid;
+    public static int thieves;
 
     public static bool flower;
     public static bool magic;
@@ -19,6 +20,8 @@ public class Quests : MonoBehaviour {
         flower = false;
         magic = false;
         blood = false;
+
+        thieves = 0;
 	}
 
     /*

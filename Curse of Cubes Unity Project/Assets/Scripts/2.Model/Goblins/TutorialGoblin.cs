@@ -45,6 +45,8 @@ public class TutorialGoblin : MonoBehaviour
                 dialog0.gameObject.SetActive(true);
                 dialog1.gameObject.SetActive(true);
                 dialog2.gameObject.SetActive(true);
+                dialog1.onClick.RemoveAllListeners();
+                dialog2.onClick.RemoveAllListeners();
 
                 dialog0.text = "Yaargh, welcome, welcome. If yargh confused let me break down thar controls.";
                 dialog1.GetComponentInChildren<Text>().text = "Um, I would rather not.";
@@ -75,7 +77,7 @@ public class TutorialGoblin : MonoBehaviour
 
     void What()
     {
-        dialog0.text = "WASD to move of course. Space to hop hop. Shift to slide around real quickie.";
+        dialog0.text = "WASD to move of course. Shift to slide around real quickie. Lookie at top write, stay green to keep yar health.";
         dialog1.GetComponentInChildren<Text>().text = "What are you talking about?";
         dialog2.gameObject.SetActive(false);
 
@@ -85,7 +87,7 @@ public class TutorialGoblin : MonoBehaviour
 
     void Whatare()
     {
-        dialog0.text = "Move yaargh mousie around to move thar cam. Left click to attack to hearts desire. Move thar cross hairs over an item to put it in yur pocket and over someone and press E to talkie... but you musta figured that out already to talk to me yarharhar.";
+        dialog0.text = "Move yaargh mousie around to move thar cam. Left click to attack to hearts desire. Press E to talkie... but you musta figured that out already to talk to me yarharhar.";
         dialog1.GetComponentInChildren<Text>().text = "Mousies... WHAT? I don't understand what you're saying. Why are you green too?";
         dialog2.gameObject.SetActive(false);
 
@@ -95,7 +97,7 @@ public class TutorialGoblin : MonoBehaviour
 
     void Mousies()
     {
-        dialog0.text = "Yarhar... Press Q to use tha health potions. And mostie importantly press I to open up thar inventory to see all yees items and J for thar questies. \n\n Oh Ima green cus Ima a goblin. FITE ME!!";
+        dialog0.text = "Yarhar... Press Q to use thar health potions. Esc to escape to tha main menu. And mostie importantly press I to open up thar inventory to see all yees items.  \n\n Oh Ima green cus Ima a goblin. FITE ME!!";
         dialog1.GetComponentInChildren<Text>().text = "BRING IT!";
         dialog2.gameObject.SetActive(false);
         dialog1.onClick.RemoveAllListeners();

@@ -19882,6 +19882,7 @@ GameObject:
   - 54: {fileID: 1614017887}
   - 114: {fileID: 1614017888}
   - 114: {fileID: 1614017893}
+  - 114: {fileID: 1614017889}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Thief
@@ -19919,6 +19920,22 @@ MonoBehaviour:
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 2107758644}
+--- !u!114 &1614017889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614017886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f14b48077e46445a37bc4e0f7fbcb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 497626670}
+  dialog0: {fileID: 1658861560}
+  dialog1: {fileID: 1434438376}
+  dialog2: {fileID: 187351765}
+  box: {fileID: 1183722311}
 --- !u!65 &1614017890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26155,6 +26172,7 @@ GameObject:
   - 65: {fileID: 2099125252}
   - 54: {fileID: 2099125249}
   - 114: {fileID: 2099125250}
+  - 114: {fileID: 2099125251}
   m_Layer: 0
   m_Name: Peasant
   m_TagString: Untagged
@@ -26192,6 +26210,22 @@ MonoBehaviour:
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 0}
+--- !u!114 &2099125251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099125248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbe6bad8b0ea8744a972a649ac02eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 497626670}
+  dialog0: {fileID: 1658861560}
+  dialog1: {fileID: 1434438376}
+  dialog2: {fileID: 187351765}
+  box: {fileID: 1183722311}
 --- !u!65 &2099125252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26334,6 +26368,7 @@ GameObject:
   - 54: {fileID: 2107758645}
   - 114: {fileID: 2107758646}
   - 114: {fileID: 2107758651}
+  - 114: {fileID: 2107758647}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Knight
@@ -26371,6 +26406,22 @@ MonoBehaviour:
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 1614017886}
+--- !u!114 &2107758647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2107758644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198fffa186b45d040b30bd74634b467f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 497626670}
+  dialog0: {fileID: 1658861560}
+  dialog1: {fileID: 1434438376}
+  dialog2: {fileID: 187351765}
+  box: {fileID: 1183722311}
 --- !u!65 &2107758648
 BoxCollider:
   m_ObjectHideFlags: 0

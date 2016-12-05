@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
             aggroAlly.hostile = true; // The NPC's ally becomes hostile.
             notAttacked = false;
             enemyAlly.notAttacked = false;
+            Quests.thieves = 3;
         }
 
         if (other.gameObject.CompareTag("PlayerSword")) // If the player's regular sword hits the enemy.
