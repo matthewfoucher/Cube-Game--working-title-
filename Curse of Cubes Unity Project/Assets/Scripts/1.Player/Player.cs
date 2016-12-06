@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
 	void Update () {
         if (isDead)
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("GameOver");
         }
     }
 
