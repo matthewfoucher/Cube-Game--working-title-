@@ -10747,6 +10747,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6823e1f4af7a84438ec4c9fe307521d, type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6823e1f4af7a84438ec4c9fe307521d, type: 3}
   m_IsPrefabParent: 0
@@ -10754,6 +10758,76 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: c6823e1f4af7a84438ec4c9fe307521d, type: 3}
   m_PrefabInternal: {fileID: 931310557}
+--- !u!1 &931310559 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: c6823e1f4af7a84438ec4c9fe307521d, type: 3}
+  m_PrefabInternal: {fileID: 931310557}
+--- !u!1 &931310560 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100010, guid: c6823e1f4af7a84438ec4c9fe307521d, type: 3}
+  m_PrefabInternal: {fileID: 931310557}
+--- !u!1 &931310561 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100032, guid: c6823e1f4af7a84438ec4c9fe307521d, type: 3}
+  m_PrefabInternal: {fileID: 931310557}
+--- !u!114 &931310562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931310559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993a26d97acdca44a92432aee737b098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostile: 0
+  attackTimer: 0
+  coolDown: 0
+  upperJaw: {fileID: 931310561}
+  lowerJaw: {fileID: 931310560}
+--- !u!114 &931310563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931310559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b776b251ab3a54bbb650c23870353f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 15000
+  currentHealth: 0
+  otherOne: {fileID: 1002002552}
+  thirdOne: {fileID: 1699752775}
+--- !u!65 &931310564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931310559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 10, z: 5}
+  m_Center: {x: 0, y: -5, z: 0}
+--- !u!54 &931310565
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931310559}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &932718010 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 39803a4cb0094f347a098ee1a31fcb9b, type: 3}
@@ -11742,6 +11816,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 287f28d555f29564d9ed6da88171f439, type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 287f28d555f29564d9ed6da88171f439, type: 3}
   m_IsPrefabParent: 0
@@ -11749,6 +11827,76 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 287f28d555f29564d9ed6da88171f439, type: 3}
   m_PrefabInternal: {fileID: 1002002550}
+--- !u!1 &1002002552 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 287f28d555f29564d9ed6da88171f439, type: 3}
+  m_PrefabInternal: {fileID: 1002002550}
+--- !u!1 &1002002553 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: 287f28d555f29564d9ed6da88171f439, type: 3}
+  m_PrefabInternal: {fileID: 1002002550}
+--- !u!1 &1002002554 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100032, guid: 287f28d555f29564d9ed6da88171f439, type: 3}
+  m_PrefabInternal: {fileID: 1002002550}
+--- !u!114 &1002002555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1002002552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993a26d97acdca44a92432aee737b098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostile: 0
+  attackTimer: 0
+  coolDown: 0
+  upperJaw: {fileID: 1002002554}
+  lowerJaw: {fileID: 1002002553}
+--- !u!114 &1002002556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1002002552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b776b251ab3a54bbb650c23870353f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 15000
+  currentHealth: 0
+  otherOne: {fileID: 931310559}
+  thirdOne: {fileID: 1699752775}
+--- !u!65 &1002002557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1002002552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 10, z: 5}
+  m_Center: {x: 0, y: -5, z: 0}
+--- !u!54 &1002002558
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1002002552}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1006058655
 Prefab:
   m_ObjectHideFlags: 0
@@ -21584,6 +21732,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 3a2d65a0030a3b141ade9c222ac7343f, type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a2d65a0030a3b141ade9c222ac7343f, type: 3}
   m_IsPrefabParent: 0
@@ -21591,6 +21743,76 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 3a2d65a0030a3b141ade9c222ac7343f, type: 3}
   m_PrefabInternal: {fileID: 1699752771}
+--- !u!1 &1699752773 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100010, guid: 3a2d65a0030a3b141ade9c222ac7343f, type: 3}
+  m_PrefabInternal: {fileID: 1699752771}
+--- !u!1 &1699752774 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100032, guid: 3a2d65a0030a3b141ade9c222ac7343f, type: 3}
+  m_PrefabInternal: {fileID: 1699752771}
+--- !u!1 &1699752775 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 3a2d65a0030a3b141ade9c222ac7343f, type: 3}
+  m_PrefabInternal: {fileID: 1699752771}
+--- !u!114 &1699752776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1699752775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993a26d97acdca44a92432aee737b098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostile: 0
+  attackTimer: 0
+  coolDown: 0
+  upperJaw: {fileID: 1699752774}
+  lowerJaw: {fileID: 1699752773}
+--- !u!114 &1699752777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1699752775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b776b251ab3a54bbb650c23870353f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 15000
+  currentHealth: 0
+  otherOne: {fileID: 1002002552}
+  thirdOne: {fileID: 931310559}
+--- !u!65 &1699752778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1699752775}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 10, z: 5}
+  m_Center: {x: 0, y: -5, z: 0}
+--- !u!54 &1699752779
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1699752775}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1700694613
 Prefab:
   m_ObjectHideFlags: 0

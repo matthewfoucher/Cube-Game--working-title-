@@ -11,6 +11,8 @@ TagManager:
   - Thief
   - Knight
   - EpicSword
+  - Fire
+  - Dragon
   layers:
   - Default
   - TransparentFX

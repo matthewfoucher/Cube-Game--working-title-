@@ -17,8 +17,8 @@ public class EnemyAttack : MonoBehaviour {
     public bool hostile; // If the enemy is hostile, this is true.
 
     public GameObject weapon; // The enemy's weapon.
-    public float attackTimer; // The remaining time before the player can attack again.
-    public float coolDown; // The total time before the player can attack again.
+    public float attackTimer; // The remaining time before the enemy can attack again.
+    public float coolDown; // The total time before the enemy can attack again.
     private bool weaponDown; // Is the weapon in attack position?
 
     // Use this for initialization
@@ -46,7 +46,7 @@ public class EnemyAttack : MonoBehaviour {
         if (attackTimer < 0)
             attackTimer = 0;
 
-        Debug.Log (target.position);
+        //Debug.Log (target.position);
 		if (((Vector3.Distance(transform.position, target.position) < aggro_dis) && (Vector3.Distance (transform.position, target.position) > min_dis)) && (hostile))
         //if ((((Vector3.Distance(transform.position, target.position) < aggro_dis) || (CompareTag("Knight") || CompareTag("Thief"))) && (Vector3.Distance (transform.position, target.position) > min_dis)) && (hostile))
         {
