@@ -40,6 +40,21 @@ public class Player : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Fireball"))
+        {
+            currentHealth -= 30;
+        }
+
+        // If the current health is less than or equal to zero...
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            isDead = true;
+        }
+    }
+
     // Heals the player when using a health potion. Called by Inventory script.
     public void Heal()
     {

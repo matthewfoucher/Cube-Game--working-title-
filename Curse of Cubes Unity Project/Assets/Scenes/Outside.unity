@@ -10786,6 +10786,7 @@ MonoBehaviour:
   coolDown: 0
   upperJaw: {fileID: 931310561}
   lowerJaw: {fileID: 931310560}
+  fireball: {fileID: 121802, guid: 8f18e1d8c46c51f429429815455062fc, type: 2}
 --- !u!114 &931310563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11855,6 +11856,7 @@ MonoBehaviour:
   coolDown: 0
   upperJaw: {fileID: 1002002554}
   lowerJaw: {fileID: 1002002553}
+  fireball: {fileID: 121802, guid: 8f18e1d8c46c51f429429815455062fc, type: 2}
 --- !u!114 &1002002556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21771,6 +21773,7 @@ MonoBehaviour:
   coolDown: 0
   upperJaw: {fileID: 1699752774}
   lowerJaw: {fileID: 1699752773}
+  fireball: {fileID: 121802, guid: 8f18e1d8c46c51f429429815455062fc, type: 2}
 --- !u!114 &1699752777
 MonoBehaviour:
   m_ObjectHideFlags: 0
