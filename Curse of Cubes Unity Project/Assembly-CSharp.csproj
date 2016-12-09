@@ -45,15 +45,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
      <Compile Include="Assets\Scripts\1.Player\Player.cs" />
      <Compile Include="Assets\Scripts\1.Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\1.Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\1.Player\SmoothMouseLook.cs" />
+     <Compile Include="Assets\Scripts\2.Model\Dragon\Dragon.cs" />
+     <Compile Include="Assets\Scripts\2.Model\Dragon\DragonAttack.cs" />
      <Compile Include="Assets\Scripts\2.Model\Goblins\Enemy.cs" />
      <Compile Include="Assets\Scripts\2.Model\Goblins\TutorialGoblin.cs" />
      <Compile Include="Assets\Scripts\2.Model\NPCs\Dovahkiid.cs" />
+     <Compile Include="Assets\Scripts\2.Model\NPCs\Knight.cs" />
+     <Compile Include="Assets\Scripts\2.Model\NPCs\Peasant.cs" />
      <Compile Include="Assets\Scripts\2.Model\NPCs\Smith.cs" />
+     <Compile Include="Assets\Scripts\2.Model\NPCs\Thief.cs" />
      <Compile Include="Assets\Scripts\2.Model\NPCs\Wizard.cs" />
+     <Compile Include="Assets\Scripts\3.View\GameOver.cs" />
      <Compile Include="Assets\Scripts\3.View\HealthBar.cs" />
      <Compile Include="Assets\Scripts\3.View\Inventory.cs" />
      <Compile Include="Assets\Scripts\3.View\Item.cs" />
@@ -61,6 +74,8 @@
      <Compile Include="Assets\Scripts\3.View\Slot.cs" />
      <Compile Include="Assets\Scripts\4.Controllers\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\4.Controllers\Quests.cs" />
+     <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
+     <None Include="Assets\PyroParticles\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

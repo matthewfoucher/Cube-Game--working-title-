@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.4967872, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -11996,8 +11996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   quality: 0
-  spriteNeutral: {fileID: 21300000, guid: 9799d399112db1548a64b9f483b7a2ff, type: 3}
-  spriteHighlighted: {fileID: 21300000, guid: eb819b5ec4a2c104291bfb38546a7609, type: 3}
+  spriteNeutral: {fileID: 21300000, guid: 4e1ac414f4587654e997f074669893a0, type: 3}
+  spriteHighlighted: {fileID: 21300000, guid: a9dddbf3d34b99f4d91e9932b0300799, type: 3}
   maxSize: 1
   strength: 0
   intellect: 9000
@@ -15921,8 +15921,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   quality: 0
-  spriteNeutral: {fileID: 21300000, guid: 9799d399112db1548a64b9f483b7a2ff, type: 3}
-  spriteHighlighted: {fileID: 21300000, guid: eb819b5ec4a2c104291bfb38546a7609, type: 3}
+  spriteNeutral: {fileID: 21300000, guid: 9dc87f061c0118040b4859ad59ffb8fc, type: 3}
+  spriteHighlighted: {fileID: 21300000, guid: d202191a3e5658742bcb3a3f5ba969c8, type: 3}
   maxSize: 1
   strength: 0
   intellect: 0
