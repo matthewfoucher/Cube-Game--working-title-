@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\1.Player\SmoothMouseLook.cs" />
     <Compile Include="Assets\Scripts\2.Model\Dragon\Dragon.cs" />
     <Compile Include="Assets\Scripts\2.Model\Dragon\DragonAttack.cs" />
+    <Compile Include="Assets\Scripts\2.Model\Dragon\DragonDialogue.cs" />
     <Compile Include="Assets\Scripts\2.Model\Goblins\Enemy.cs" />
     <Compile Include="Assets\Scripts\2.Model\Goblins\TutorialGoblin.cs" />
     <Compile Include="Assets\Scripts\2.Model\NPCs\Dovahkiid.cs" />
