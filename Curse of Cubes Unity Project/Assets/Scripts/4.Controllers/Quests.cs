@@ -7,6 +7,7 @@ public class Quests : MonoBehaviour {
     public static int epicswordquest;
     public static int dovahkiid;
     public static int thieves;
+    public static int dragon;
 
     public static bool flower;
     public static bool magic;
@@ -22,6 +23,14 @@ public class Quests : MonoBehaviour {
         blood = false;
 
         thieves = 0;
+
+        dragon = 0;
+        /*
+        1 means aggro
+        2 means killed by dovahkube
+        3 means killed by dovahkiid
+        4 means suicide 
+        */
 	}
 
     /*

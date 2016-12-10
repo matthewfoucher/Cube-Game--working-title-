@@ -12,20 +12,18 @@ public class DragonDialogue : MonoBehaviour
     public Button dialog2;
     public RawImage box;
 
-    //public bool failedTalk; //if the player failed the talk with the dragon. this should also be accessed by aggro so u cant after attacking them
     //aggro
     // Use this for initialization
     void Start()
     {
         box.gameObject.SetActive(false);
-       // failedTalk = false;
         //aggro is set false at start. aggros if dovahkiid quest is active, or attacked, or dialogue exit
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && Quests.dragon == 0)
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
             if (distance <= 5.0f)
@@ -57,7 +55,7 @@ public class DragonDialogue : MonoBehaviour
     void GoesAggro()
     {
         //aggro call
-       // failedTalk = true;
+        Quests.dragon = 1; //1 means aggro
         dialog0.gameObject.SetActive(false);
         dialog1.gameObject.SetActive(false);
         dialog2.gameObject.SetActive(false);
@@ -161,6 +159,7 @@ public class DragonDialogue : MonoBehaviour
 
     void MrPink()
     {
+        //Quests.dragon = 4;
         //changes dragon quest to reflect the 'suicide'
         //would load gameover screen after
     }
