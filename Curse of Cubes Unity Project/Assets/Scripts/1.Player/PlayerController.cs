@@ -19,6 +19,13 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public Inventory inventory;
 
+    //Dialogue GUI for pause menu
+    public Text dialog0;
+    public Button dialog1;
+    public Button dialog2;
+    public RawImage box;
+    private bool paused;
+
     public GameObject blood; // The pickup object for the Dovahkiid's blood.
     public GameObject epicsword; // The pickup object for the epic sword.
     public GameObject weapon; // The player's weapon.
@@ -26,10 +33,12 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-      //  pressed = false;
+        box.gameObject.SetActive(false);
+        //  pressed = false;
         rb = GetComponent<Rigidbody>();
         epic.SetActive(false);
-      //  inventory.gameObject.SetActive(false); //instead of grid, inventory cus it actually disables it
+        paused = false;
+        //  inventory.gameObject.SetActive(false); //instead of grid, inventory cus it actually disables it
     }
 
     void Update()
@@ -52,7 +61,28 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape)) // Quit to main menu.
         {
-            SceneManager.LoadScene("Main Menu");
+            if (!paused)
+            {
+                paused = true;
+                Time.timeScale = 0.0f;
+                Cursor.lockState = CursorLockMode.None;
+
+                box.gameObject.SetActive(true);
+                dialog0.gameObject.SetActive(true);
+                dialog1.gameObject.SetActive(true);
+                dialog2.gameObject.SetActive(true);
+                dialog1.onClick.RemoveAllListeners();
+                dialog2.onClick.RemoveAllListeners();
+                GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
+
+                dialog0.text = "Do you want to quit back to the Main Menu?";
+
+                dialog1.GetComponentInChildren<Text>().text = "Yes";
+                dialog1.onClick.AddListener(Yes);
+
+                dialog2.GetComponentInChildren<Text>().text = "No";
+                dialog2.onClick.AddListener(No);
+            }
         }
 
         if (Quests.dovahkiid == 1)
@@ -110,5 +140,23 @@ public class PlayerController : MonoBehaviour
             }
             Destroy(collision.gameObject);
         }
+    }
+
+    void Yes()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    void No()
+    {
+        dialog0.gameObject.SetActive(false);
+        dialog1.gameObject.SetActive(false);
+        dialog2.gameObject.SetActive(false);
+        box.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1.0f;
+        GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;
+        paused = false;
     }
 }

@@ -6168,6 +6168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   inventory: {fileID: 2111700343}
+  dialog0: {fileID: 1658861560}
+  dialog1: {fileID: 1434438376}
+  dialog2: {fileID: 187351765}
+  box: {fileID: 1183722311}
   blood: {fileID: 1000010706016262, guid: 19fdaa2372f96604092485e6049a6e0e, type: 2}
   epicsword: {fileID: 1000013829338598, guid: d3a881ab8acdde64f9faab4ac0f9feb2, type: 2}
   weapon: {fileID: 124297902}
