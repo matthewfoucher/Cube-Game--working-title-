@@ -32,6 +32,11 @@ public class Player : MonoBehaviour {
             currentHealth -= 10;
         }
 
+        if (other.gameObject.CompareTag("Pit"))
+        {
+            isDead = true;
+        }
+
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)
         {
