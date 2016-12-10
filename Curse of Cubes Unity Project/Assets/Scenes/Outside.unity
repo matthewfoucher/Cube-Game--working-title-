@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692528, g: 0.4967872, b: 0.5750856, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6454,6 +6454,7 @@ GameObject:
   - 54: {fileID: 515931801}
   - 114: {fileID: 515931799}
   - 114: {fileID: 515931798}
+  - 65: {fileID: 515931800}
   m_Layer: 0
   m_Name: Tutorial Goblin
   m_TagString: Tutorial
@@ -6489,10 +6490,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c02045f0b6c214eb6d5064d523d0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 0}
+--- !u!65 &515931800
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 515931797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &515931801
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8027,7 +8039,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c02045f0b6c214eb6d5064d523d0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 0}
@@ -20557,7 +20568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c02045f0b6c214eb6d5064d523d0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 2107758644}
@@ -21202,7 +21212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c02045f0b6c214eb6d5064d523d0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000010713379188, guid: d4fea8030eac47845855102973cfbe4e, type: 2}
   otherOne: {fileID: 0}
@@ -25509,7 +25518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c02045f0b6c214eb6d5064d523d0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 0}
@@ -27024,7 +27032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c02045f0b6c214eb6d5064d523d0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 0}
@@ -27220,7 +27227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c02045f0b6c214eb6d5064d523d0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
   currentHealth: 0
   health: {fileID: 1000010045002430, guid: f3803a6597944ca49943dec288e2bbdc, type: 2}
   otherOne: {fileID: 1614017886}

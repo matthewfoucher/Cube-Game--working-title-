@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
-    public int startingHealth = 100; // The amount of health the enemy starts the game with.
+    private int startingHealth = 200; // The amount of health the enemy starts the game with.
     public int currentHealth; // The current health the enemy has.
     bool isDead; // Whether the enemy is dead.
     public GameObject health;

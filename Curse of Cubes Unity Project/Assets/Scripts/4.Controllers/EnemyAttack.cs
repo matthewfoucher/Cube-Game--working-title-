@@ -22,15 +22,9 @@ public class EnemyAttack : MonoBehaviour {
     private bool weaponDown; // Is the weapon in attack position?
 
     // Use this for initialization
-    void Start () {
-	    if (CompareTag("Tutorial") || CompareTag("Thief") || CompareTag("Knight"))
-	    {
-	        hostile = false;
-	    }
-	    else
-	    {
-	        hostile = true;
-	    }
+    void Start ()
+    {
+        hostile = false;
 
         attackTimer = 0;
         coolDown = 2;
@@ -46,21 +40,31 @@ public class EnemyAttack : MonoBehaviour {
         if (attackTimer < 0)
             attackTimer = 0;
 
-        //Debug.Log (target.position);
-		if (((Vector3.Distance(transform.position, target.position) < aggro_dis) && (Vector3.Distance (transform.position, target.position) > min_dis)) && (hostile))
-        //if ((((Vector3.Distance(transform.position, target.position) < aggro_dis) || (CompareTag("Knight") || CompareTag("Thief"))) && (Vector3.Distance (transform.position, target.position) > min_dis)) && (hostile))
-        {
-            /*Rotate to the target point
-			Quaternion targetRotation = Quaternion.LookRotation(target.position - transform.position);		
-			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotSpeed); 
-            */
+	    if (hostile)
+	    {
+	        if ((Vector3.Distance(transform.position, target.position) < aggro_dis) && (Vector3.Distance(transform.position, target.position) > min_dis))
+	        {
+                // Rotate to look at the player.
+                transform.LookAt(target.transform);
 
-            // Rotate to look at the player.
-            transform.LookAt(target.transform);
+                //Go Forward
+                transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            }
 
-            //Go Forward
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
-		}
+            if (Vector3.Distance(transform.position, target.position) < 2.5f)
+            {
+                // Atack the player.
+                if (attackTimer == 0)
+                {
+                    // Attack();
+                    weapon.GetComponent<BoxCollider>().enabled = true;
+                    weapon.transform.Rotate(0, 0, 90);
+                    attackTimer = coolDown;
+                    weaponDown = true;
+                    Invoke("ResetAttack", 0.2f);
+                }
+            }
+        }
 
 	    if ((Vector3.Distance(transform.position, target.position) < 2.5f) && (hostile))
 	    {
@@ -76,6 +80,14 @@ public class EnemyAttack : MonoBehaviour {
             }
         }
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            hostile = true;
+        }
+    }
 
     void ResetAttack()
     {
