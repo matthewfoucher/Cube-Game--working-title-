@@ -31,19 +31,25 @@ public class Dragon : MonoBehaviour
             // ... no need to take damage so exit the function.
             return;
 
-        if (notAttacked) // If either the knight or the thief is attacked:
+        if (notAttacked) // If the dragon is attacked.
         {
-            aggro = GetComponent<DragonAttack>(); // Get the Dragon Attack script attached to the dragon head that got attacked.
-            aggroAlly = otherOne.GetComponent<DragonAttack>(); // Get the Dragon Attack script for the second dragon head.
-            aggroSecondAlly = thirdOne.GetComponent<DragonAttack>(); // Get the Dragon Attack script for the third dragon head.
-            dragonAlly = otherOne.GetComponent<Dragon>(); // Get the Dragon script for the second dragon head.
-            secondDragonAlly = thirdOne.GetComponent<Dragon>(); // Get the Dragon script for the third dragon head.
-            aggro.hostile = true; // The attacked dragon head becomes hostile.
-            aggroAlly.hostile = true; // The second dragon head becomes hostile.
-            aggroSecondAlly.hostile = true; // The third dragon head becomes hostile.
-            notAttacked = false;
-            dragonAlly.notAttacked = false;
-            secondDragonAlly.notAttacked = false;
+            if (other.gameObject.CompareTag("PlayerSword") || other.gameObject.CompareTag("EpicSword"))
+            {
+                aggro = GetComponent<DragonAttack>();
+                    // Get the Dragon Attack script attached to the dragon head that got attacked.
+                aggroAlly = otherOne.GetComponent<DragonAttack>();
+                    // Get the Dragon Attack script for the second dragon head.
+                aggroSecondAlly = thirdOne.GetComponent<DragonAttack>();
+                    // Get the Dragon Attack script for the third dragon head.
+                dragonAlly = otherOne.GetComponent<Dragon>(); // Get the Dragon script for the second dragon head.
+                secondDragonAlly = thirdOne.GetComponent<Dragon>(); // Get the Dragon script for the third dragon head.
+                aggro.hostile = true; // The attacked dragon head becomes hostile.
+                aggroAlly.hostile = true; // The second dragon head becomes hostile.
+                aggroSecondAlly.hostile = true; // The third dragon head becomes hostile.
+                notAttacked = false;
+                dragonAlly.notAttacked = false;
+                secondDragonAlly.notAttacked = false;
+            }
         }
 
         if (other.gameObject.CompareTag("PlayerSword")) // If the player's regular sword hits the enemy.
