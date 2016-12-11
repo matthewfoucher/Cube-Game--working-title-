@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
                 dialog1.onClick.RemoveAllListeners();
                 dialog2.onClick.RemoveAllListeners();
                 GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
+                GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
 
                 dialog0.text = "Do you want to quit back to the Main Menu?";
 
@@ -158,5 +159,6 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1.0f;
         GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true;
         paused = false;
+        GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = true;
     }
 }

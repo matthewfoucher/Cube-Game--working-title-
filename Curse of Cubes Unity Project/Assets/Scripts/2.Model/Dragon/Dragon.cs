@@ -13,7 +13,7 @@ public class Dragon : MonoBehaviour
     private Dragon secondDragonAlly; // This will enable the dragon script for the third dragon head.
     public GameObject otherOne; // The game object reference to the second dragon head.
     public GameObject thirdOne; // The game object reference to the third dragon head.
-    private bool notAttacked; // If the dragon has not been attacked yet, this is true.
+    public bool notAttacked; // If the dragon has not been attacked yet, this is true.
 
     // Use this for initialization
     void Start()

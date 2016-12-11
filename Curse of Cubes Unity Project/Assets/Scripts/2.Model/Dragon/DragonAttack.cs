@@ -26,7 +26,7 @@ public class DragonAttack : MonoBehaviour {
         if (attackTimer < 0)
             attackTimer = 0;
 
-	    if (hostile)
+	    if (hostile || Quests.dragon == 1)
 	    {
             // Atack the player.
 	        if (attackTimer == 0)

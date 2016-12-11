@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DragonDialogue : MonoBehaviour
@@ -12,12 +13,10 @@ public class DragonDialogue : MonoBehaviour
     public Button dialog2;
     public RawImage box;
 
-    //aggro
     // Use this for initialization
     void Start()
     {
         box.gameObject.SetActive(false);
-        //aggro is set false at start. aggros if dovahkiid quest is active, or attacked, or dialogue exit
     }
 
     // Update is called once per frame
@@ -54,7 +53,6 @@ public class DragonDialogue : MonoBehaviour
 
     void GoesAggro()
     {
-        //aggro call
         Quests.dragon = 1; //1 means aggro
         dialog0.gameObject.SetActive(false);
         dialog1.gameObject.SetActive(false);
@@ -159,8 +157,8 @@ public class DragonDialogue : MonoBehaviour
 
     void MrPink()
     {
-        //Quests.dragon = 4;
+        Quests.dragon = 4;
         //changes dragon quest to reflect the 'suicide'
-        //would load gameover screen after
+        SceneManager.LoadScene("GameOver");
     }
 }
