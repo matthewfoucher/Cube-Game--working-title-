@@ -36,6 +36,7 @@ public class Dragon : MonoBehaviour
         {
             if (other.gameObject.CompareTag("PlayerSword") || other.gameObject.CompareTag("EpicSword")) // If the dragon is attacked by the player:
             {
+                Quests.dragon = 1;
                 aggro = GetComponent<DragonAttack>();
                     // Get the Dragon Attack script attached to the dragon head that got attacked.
                 aggroAlly = otherOne.GetComponent<DragonAttack>();
@@ -87,6 +88,7 @@ public class Dragon : MonoBehaviour
                 {
                     Quests.dragon = 3; // Set appropriate quest state.
                 }
+                GlobalControl.Instance.dragon = Quests.dragon;
                 SceneManager.LoadScene("GameOver"); // Load game ending scene.
             }
             Destroy(gameObject); // Destroy the dragon head's game object.

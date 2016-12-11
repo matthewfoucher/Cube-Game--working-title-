@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\3.View\Slot.cs" />
     <Compile Include="Assets\Scripts\4.Controllers\BossTrigger.cs" />
     <Compile Include="Assets\Scripts\4.Controllers\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\4.Controllers\GlobalControl.cs" />
     <Compile Include="Assets\Scripts\4.Controllers\Quests.cs" />
   </ItemGroup>
   <ItemGroup>

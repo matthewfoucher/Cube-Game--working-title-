@@ -162,6 +162,7 @@ public class DragonDialogue : MonoBehaviour
     void MrPink()
     {
         Quests.dragon = 4;
+        GlobalControl.Instance.dragon = Quests.dragon;
         //changes dragon quest to reflect the 'suicide'
         SceneManager.LoadScene("GameOver");
     }

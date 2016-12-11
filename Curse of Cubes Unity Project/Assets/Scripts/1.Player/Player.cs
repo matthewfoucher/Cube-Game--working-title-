@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
 	void Update () {
         if (isDead)
         {
+            GlobalControl.Instance.dragon = Quests.dragon;
             SceneManager.LoadScene("GameOver");
         }
     }
