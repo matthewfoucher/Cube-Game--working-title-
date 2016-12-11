@@ -8,6 +8,7 @@ public class Quests : MonoBehaviour {
     public static int dovahkiid;
     public static int thieves;
     public static int dragon;
+    public static int dragonCount; // How many dragon heads are alive.
 
     public static bool flower;
     public static bool magic;
@@ -30,8 +31,11 @@ public class Quests : MonoBehaviour {
         2 means killed by dovahkube
         3 means killed by dovahkiid
         4 means suicide 
+        5 means killed by dovahkube with regular sword.
         */
-	}
+
+        dragonCount = 3;
+    }
 
     /*
     public void FindWand()

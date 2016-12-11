@@ -15,6 +15,7 @@ TagManager:
   - Dragon
   - Fireball
   - Pit
+  - Dovahkiid
   layers:
   - Default
   - TransparentFX

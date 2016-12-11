@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Dragon : MonoBehaviour
@@ -31,9 +32,9 @@ public class Dragon : MonoBehaviour
             // ... no need to take damage so exit the function.
             return;
 
-        if (notAttacked) // If the dragon is attacked.
+        if (notAttacked) // If the dragon has not yet been attacked:
         {
-            if (other.gameObject.CompareTag("PlayerSword") || other.gameObject.CompareTag("EpicSword"))
+            if (other.gameObject.CompareTag("PlayerSword") || other.gameObject.CompareTag("EpicSword")) // If the dragon is attacked by the player:
             {
                 aggro = GetComponent<DragonAttack>();
                     // Get the Dragon Attack script attached to the dragon head that got attacked.
@@ -46,27 +47,49 @@ public class Dragon : MonoBehaviour
                 aggro.hostile = true; // The attacked dragon head becomes hostile.
                 aggroAlly.hostile = true; // The second dragon head becomes hostile.
                 aggroSecondAlly.hostile = true; // The third dragon head becomes hostile.
-                notAttacked = false;
-                dragonAlly.notAttacked = false;
-                secondDragonAlly.notAttacked = false;
+                notAttacked = false; // Dragon has been attacked.
+                dragonAlly.notAttacked = false; // Dragon has been attacked.
+                secondDragonAlly.notAttacked = false; // Dragon ahs been attacked.
             }
         }
 
-        if (other.gameObject.CompareTag("PlayerSword")) // If the player's regular sword hits the enemy.
+        if (other.gameObject.CompareTag("PlayerSword")) // If the player's regular sword hits the dragon.
         {
             currentHealth -= 30; // Deal 30 damage.
         }
 
-        if (other.gameObject.CompareTag("EpicSword")) // If the player's epic sword hits the enemy.
+        if (other.gameObject.CompareTag("EpicSword")) // If the player's epic sword hits the dragon.
         {
             currentHealth -= 9001; // Deal over 9,000 damage.
+        }
+
+        if (other.gameObject.CompareTag("Dovahkiid")) // If the Dovahkiid hits the dragon.
+        {
+            currentHealth -= 15000; // Kill the dragon.
         }
 
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)
         {
-            isDead = true; // The enemy is now dead.
-            Destroy(gameObject); // Destroy the enemy's game object.
+            isDead = true; // The dragon head is now dead.
+            Quests.dragonCount--; // subtract one from the number of living dragon heads.
+            if (Quests.dragonCount == 0) // If all heads are gone:
+            {
+                if (other.gameObject.CompareTag("PlayerSword")) // If dragon was killed by regular player sword:
+                {
+                    Quests.dragon = 5; // Set appropriate quest state.
+                }
+                if (other.gameObject.CompareTag("EpicSword")) // If dragon was killed by epic sword:
+                {
+                    Quests.dragon = 2; // Set appropriate quest state.
+                }
+                if (other.gameObject.CompareTag("Dovahkiid")) // If dragon was killed by Dovahkiid:
+                {
+                    Quests.dragon = 3; // Set appropriate quest state.
+                }
+                SceneManager.LoadScene("GameOver"); // Load game ending scene.
+            }
+            Destroy(gameObject); // Destroy the dragon head's game object.
         }
     }
 }

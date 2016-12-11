@@ -36,8 +36,8 @@ public class DragonAttack : MonoBehaviour {
                 attackTimer = coolDown;
                 jawsOpen = true;
                 // Instantiate(fireball, gameObject.transform.position, Quaternion.identity); // Drop a big fireball.
-	            Vector3 spawnPosition = gameObject.transform.position + new Vector3(0, 0, 8);
-	            Instantiate(fireball, spawnPosition, Quaternion.Euler(60, 0, 0));
+	            Vector3 spawnPosition = gameObject.transform.position + new Vector3(6, 0, 9);
+	            Instantiate(fireball, spawnPosition, Quaternion.Euler(70, 0, -60));
                 Invoke("ResetAttack", 2.0f);
             }
 

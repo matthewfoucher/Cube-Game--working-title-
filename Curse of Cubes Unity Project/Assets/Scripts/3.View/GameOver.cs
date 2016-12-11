@@ -50,7 +50,7 @@ public class GameOver : MonoBehaviour {
         if (Quests.dragon == 5)
         {
             title.text = "HOLY SHIT!";
-            desc.text = "HOW DID U KILL THE DRAGONS WITHOUT THE EPIC SWORD? WAS THAT 2 REAL TIME DAYS? TELL THE DEVS!!!";
+            desc.text = "HOW DID YOU KILL THE DRAGONS WITHOUT THE EPIC SWORD? WAS THAT 2 REAL TIME DAYS? TELL THE DEVS!!!";
         }
         else
         {
