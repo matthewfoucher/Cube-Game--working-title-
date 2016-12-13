@@ -3,8 +3,8 @@ using System.Collections;
 
 public class DragonAttack : MonoBehaviour {
     public bool hostile; // If the enemy is hostile, this is true.
-    public float attackTimer; // The remaining time before the player can attack again.
-    public float coolDown; // The total time before the player can attack again.
+    public float attackTimer = 0.0f; // The remaining time before the player can attack again.
+    public float coolDown = 5.0f; // The total time before the player can attack again.
     private bool jawsOpen; // This is true if the dragon has its mouth open.
     public GameObject upperJaw; // The dragon's upper jaw.
     public GameObject lowerJaw; // The dragon's lower jaw.
@@ -13,8 +13,6 @@ public class DragonAttack : MonoBehaviour {
     // Use this for initialization
     void Start () {
         hostile = false;
-        attackTimer = 0.0f;
-        coolDown = 5.0f;
         jawsOpen = false;
     }
 	
@@ -36,8 +34,8 @@ public class DragonAttack : MonoBehaviour {
                 attackTimer = coolDown;
                 jawsOpen = true;
                 // Instantiate(fireball, gameObject.transform.position, Quaternion.identity); // Drop a big fireball.
-	            Vector3 spawnPosition = gameObject.transform.position + new Vector3(6, 0, 9);
-	            Instantiate(fireball, spawnPosition, Quaternion.Euler(70, 0, -60));
+	            Vector3 spawnPosition = gameObject.transform.position + new Vector3(0, -3, 3);
+	            Instantiate(fireball, spawnPosition, Quaternion.Euler(90, 0, 0));
                 Invoke("ResetAttack", 2.0f);
             }
 

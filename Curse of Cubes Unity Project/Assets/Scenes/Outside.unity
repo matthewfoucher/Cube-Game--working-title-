@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692528, g: 0.4967872, b: 0.5750856, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -10873,7 +10873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostile: 0
   attackTimer: 0
-  coolDown: 0
+  coolDown: 4
   upperJaw: {fileID: 931310561}
   lowerJaw: {fileID: 931310560}
   fireball: {fileID: 121802, guid: 8f18e1d8c46c51f429429815455062fc, type: 2}
@@ -10900,11 +10900,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 931310559}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 10, z: 5}
-  m_Center: {x: 0, y: -5, z: 0}
+  m_Size: {x: 5, y: 10, z: 3}
+  m_Center: {x: 0, y: -5, z: -1}
 --- !u!54 &931310565
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11985,7 +11985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostile: 0
   attackTimer: 0
-  coolDown: 0
+  coolDown: 5
   upperJaw: {fileID: 1002002554}
   lowerJaw: {fileID: 1002002553}
   fireball: {fileID: 121802, guid: 8f18e1d8c46c51f429429815455062fc, type: 2}
@@ -12012,11 +12012,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1002002552}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 10, z: 5}
-  m_Center: {x: 0, y: -5, z: 0}
+  m_Size: {x: 5, y: 10, z: 3}
+  m_Center: {x: 0, y: -5, z: -1}
 --- !u!54 &1002002558
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15173,8 +15173,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1202542496}
   m_LocalRotation: {x: -0, y: 0.13052613, z: -0, w: 0.99144495}
-  m_LocalPosition: {x: 0.45, y: -6.7900004, z: 1.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.03, y: -6.7900004, z: 0.1}
+  m_LocalScale: {x: 5, y: 10, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 931310558}
@@ -16337,8 +16337,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1251438736}
   m_LocalRotation: {x: -0, y: -0.13052621, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: -0.81, y: -6.7900004, z: 1.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.39, y: -6.7900004, z: 0.02}
+  m_LocalScale: {x: 5, y: 10, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1699752772}
@@ -22078,7 +22078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostile: 0
   attackTimer: 0
-  coolDown: 0
+  coolDown: 3
   upperJaw: {fileID: 1699752774}
   lowerJaw: {fileID: 1699752773}
   fireball: {fileID: 121802, guid: 8f18e1d8c46c51f429429815455062fc, type: 2}
@@ -22105,11 +22105,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1699752775}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 10, z: 5}
-  m_Center: {x: 0, y: -5, z: 0}
+  m_Size: {x: 5, y: 10, z: 3}
+  m_Center: {x: 0, y: -5, z: -1}
 --- !u!54 &1699752779
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26630,8 +26630,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062636854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.23, y: -6.7900004, z: 1.63}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.23, y: -6.7900004, z: 0.03}
+  m_LocalScale: {x: 5, y: 10, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1002002551}

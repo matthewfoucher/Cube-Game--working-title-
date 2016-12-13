@@ -429,7 +429,6 @@ MonoBehaviour:
     m_Bits: 4294967295
   ProjectileDestroyParticleSystemsOnCollision:
   - {fileID: 19810394}
-  - {fileID: 19886674}
 --- !u!114 &11462752
 MonoBehaviour:
   m_ObjectHideFlags: 1
