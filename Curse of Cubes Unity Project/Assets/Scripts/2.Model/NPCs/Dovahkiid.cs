@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+// Dialogue options for the Dovahkiid.
 public class Dovahkiid : MonoBehaviour
 { 
     public GameObject player; //So NPC can look at player
@@ -23,16 +24,17 @@ public class Dovahkiid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && complete == false)
+        if (Input.GetKeyDown(KeyCode.E) && complete == false) // If the player hasn't done the Dovahkiid's quest yet,
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
-            if (distance <= 5.0f)
+            if (distance <= 5.0f) // If the player is within talking distance,
             {
                 Cursor.lockState = CursorLockMode.None;
                 GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
                 GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
 
+                // Set up dialogue GUI, and call resulting dialogue functions.
                 transform.LookAt(player.transform);
                 box.gameObject.SetActive(true);
                 dialog0.gameObject.SetActive(true);

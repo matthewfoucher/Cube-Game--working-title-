@@ -18,8 +18,8 @@ public class Enemy : MonoBehaviour
     {
         isDead = false; // Enemy is alive.
         // Setting the current health when the enemy first spawns.
-        currentHealth = startingHealth;
-        notAttacked = true;
+        currentHealth = startingHealth; // Enemy starts with 200 health.
+        notAttacked = true; // Enemy has not been attacked yet.
     }
 
     void OnTriggerEnter(Collider other)
@@ -36,9 +36,9 @@ public class Enemy : MonoBehaviour
             enemyAlly = otherOne.GetComponent<Enemy>(); // Get the Enemy script for the other NPC.
             aggro.hostile = true; // The attacked NPC becomes hostile.
             aggroAlly.hostile = true; // The NPC's ally becomes hostile.
-            notAttacked = false;
-            enemyAlly.notAttacked = false;
-            Quests.thieves = 3;
+            notAttacked = false; // Enemy has been attacked.
+            enemyAlly.notAttacked = false; // Enemy's ally has been attacked.
+            Quests.thieves = 3; // Thieves quest state is changed to reflect the attack.
         }
 
         if (other.gameObject.CompareTag("PlayerSword")) // If the player's regular sword hits the enemy.

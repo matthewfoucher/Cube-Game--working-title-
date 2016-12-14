@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
+// Dialogue options for the Peasant.
 public class Peasant : MonoBehaviour
 {
     public GameObject player; //So NPC can look at player

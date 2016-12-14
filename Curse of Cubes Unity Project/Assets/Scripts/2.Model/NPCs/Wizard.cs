@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
+// Dialogue options for the Wizard.
 public class Wizard : MonoBehaviour {
 	public GameObject player; //So NPC can look at player
 

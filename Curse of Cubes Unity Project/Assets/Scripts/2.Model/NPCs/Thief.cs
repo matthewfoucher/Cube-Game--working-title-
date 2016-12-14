@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+// Dialogue options for the Thief.
 public class Thief : MonoBehaviour
 {
     public GameObject player; //So NPC can look at player

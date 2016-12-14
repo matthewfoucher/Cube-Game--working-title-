@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 [AddComponentMenu("Camera-Control/Smooth Mouse Look")]
+
+// SmoothMouseLook script found at: http://wiki.unity3d.com/index.php/SmoothMouseLook
+// All credit goes to the original creators.
 public class SmoothMouseLook : MonoBehaviour
 {
     public GameObject player;

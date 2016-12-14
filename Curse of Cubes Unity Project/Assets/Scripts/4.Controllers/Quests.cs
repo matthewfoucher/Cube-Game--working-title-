@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Keeps track of all quests.
 public class Quests : MonoBehaviour {
 
     public static int wandquest; //once it reaches level 1, the quest is complete
@@ -36,15 +37,4 @@ public class Quests : MonoBehaviour {
 
         dragonCount = 3;
     }
-
-    /*
-    public void FindWand()
-    {
-        wandquest++;
-      
-        if (wandquest == 1)
-            wandquest = 9;
-            
-        return;
-    }*/
 }

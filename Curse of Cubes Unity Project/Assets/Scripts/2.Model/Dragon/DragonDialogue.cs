@@ -16,16 +16,16 @@ public class DragonDialogue : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        box.gameObject.SetActive(false);
+        box.gameObject.SetActive(false); // Dialogue box is disabled at start.
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Quests.dragon == 0)
+        if (Input.GetKeyDown(KeyCode.E) && Quests.dragon == 0) // If the player presses E AND the dragon has not talked to the player yet,
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
-            if (distance <= 5.0f)
+            if (distance <= 5.0f) // Talk to the player, if the player is less than 5 Unity units away from the dragon.
             {
                 Cursor.lockState = CursorLockMode.None; // Unlock the mouse cursor so the player can click on the buttons.
                 GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false; // Disable the player attack script.
@@ -40,6 +40,7 @@ public class DragonDialogue : MonoBehaviour
                 dialog1.onClick.RemoveAllListeners();
                 dialog2.onClick.RemoveAllListeners();
 
+                // Show dialogue choices, call resulting functions.
                 dialog0.text = "Black: What do you want, cube?";
 
                 dialog1.GetComponentInChildren<Text>().text = "DIE, DRAGON!!!";
@@ -84,6 +85,8 @@ public class DragonDialogue : MonoBehaviour
         dialog2.onClick.AddListener();
     }
     */
+
+    // All dialogue functions will display dialogue on the screen, give the player dialogue choices, and call resulting functions.
 
     void CalmDown()
     {
@@ -164,6 +167,6 @@ public class DragonDialogue : MonoBehaviour
         Quests.dragon = 4;
         GlobalControl.Instance.dragon = Quests.dragon;
         //changes dragon quest to reflect the 'suicide'
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver"); // Game over. Player convinced the dragon to eat itself.
     }
 }

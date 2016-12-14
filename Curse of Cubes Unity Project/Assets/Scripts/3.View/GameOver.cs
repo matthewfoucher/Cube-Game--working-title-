@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Game Over scene.
 public class GameOver : MonoBehaviour {
 
 
@@ -24,7 +25,7 @@ public class GameOver : MonoBehaviour {
     }
     */
 
-	// Update is called once per frame
+	// Display the game over message that corresponds to the current state of the dragon quest.
     void Update ()
     {
         if (GlobalControl.Instance.dragon == 1)
@@ -62,6 +63,6 @@ public class GameOver : MonoBehaviour {
 
     public void OnClickMain()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Main Menu"); // When the player clicks the button, go back to the main menu.
     }
 }

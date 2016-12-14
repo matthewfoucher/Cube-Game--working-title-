@@ -12,41 +12,42 @@ public class DragonAttack : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        hostile = false;
-        jawsOpen = false;
+        hostile = false; // Dragon is not hostile. Dragon won't attack.
+        jawsOpen = false; // Dragon's jaws are closed.
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (attackTimer > 0)
-            attackTimer -= Time.deltaTime;
+        if (attackTimer > 0) // Dragon attacks every 5 seconds. If dragon's attackTimer is on cooldown,
+            attackTimer -= Time.deltaTime; // Subtract the amount of time that has passed since the last frame.
 
-        if (attackTimer < 0)
-            attackTimer = 0;
+        if (attackTimer < 0) // If attackTimer goes below 0,
+            attackTimer = 0; // Reset to 0.
 
-	    if (hostile || Quests.dragon == 1)
+	    if (hostile || Quests.dragon == 1) // If the dragon is hostile, or the dragon has initiated attack due to dialogue,
 	    {
             // Atack the player.
 	        if (attackTimer == 0)
 	        {
-                upperJaw.transform.Rotate(-30, 0, 0);
-                lowerJaw.transform.Rotate(30, 0, 0);
-                attackTimer = coolDown;
-                jawsOpen = true;
+                upperJaw.transform.Rotate(-30, 0, 0); // Rotate the dragon's upper jaw up 30 degrees,
+                lowerJaw.transform.Rotate(30, 0, 0); // and the lower jaw down 30 degrees, so the dragon's mouth appears open.
+                attackTimer = coolDown; // Dragon may attack again after 5.0 seconds.
+                jawsOpen = true; // Dragon's jaws are open.
                 // Instantiate(fireball, gameObject.transform.position, Quaternion.identity); // Drop a big fireball.
-	            Vector3 spawnPosition = gameObject.transform.position + new Vector3(0, -3, 3);
-	            Instantiate(fireball, spawnPosition, Quaternion.Euler(90, 0, 0));
-                Invoke("ResetAttack", 2.0f);
+	            Vector3 spawnPosition = gameObject.transform.position + new Vector3(0, -3, 3); // Spawn the fireball in a specific position near the dragon's jaws.
+	            Instantiate(fireball, spawnPosition, Quaternion.Euler(90, 0, 0)); // Rotate fireball so it faces straight down.
+                Invoke("ResetAttack", 2.0f); // Wait 2.0 seconds, then call dragon's ResetAttack function.
             }
 
         }
     }
 
+    // Reset the dragon back to non-attacking position.
     void ResetAttack()
     {
-        if (jawsOpen)
+        if (jawsOpen) // If the jaws are open,
         {
-            upperJaw.transform.Rotate(30, 0, 0);
+            upperJaw.transform.Rotate(30, 0, 0); // Close the dragon's jaws.
             lowerJaw.transform.Rotate(-30, 0, 0);
             jawsOpen = false;
         }

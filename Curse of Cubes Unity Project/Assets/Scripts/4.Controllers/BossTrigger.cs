@@ -4,7 +4,7 @@ using System.Collections;
 public class BossTrigger : MonoBehaviour
 {
 
-    public GameObject rock;
+    public GameObject rock; // Reference to the rock object.
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class BossTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            rock.SetActive(true);
+            rock.SetActive(true); // If the player walks through the trigger, spawn a big rock so the player cannot leave the dragon's cave.
         }
     }
 }

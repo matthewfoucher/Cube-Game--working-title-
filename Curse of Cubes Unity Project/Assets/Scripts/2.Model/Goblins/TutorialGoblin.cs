@@ -13,19 +13,19 @@ public class TutorialGoblin : MonoBehaviour
     public RawImage box;
 
     private bool pressed = false;
-    private EnemyAttack aggro;
+    private EnemyAttack aggro; // Reference to the Tutorial Goblin's enemyattack script.
 
     // Use this for initialization
     void Start()
     {
-        box.gameObject.SetActive(false);
-        aggro = GetComponent<EnemyAttack>();
+        box.gameObject.SetActive(false); // Disable dialogue box at start.
+        aggro = GetComponent<EnemyAttack>(); // Get the enemyattack script.
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && (aggro.hostile == false))
+        if (Input.GetKeyDown(KeyCode.E) && (aggro.hostile == false)) // If the player presses E and the tutorial goblin is not currently attacking the player,
         {
             /*
             GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
@@ -33,12 +33,14 @@ public class TutorialGoblin : MonoBehaviour
             GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
             */
             float distance = Vector3.Distance(transform.position, player.transform.position);
-            if (distance <= 5.0f)
+            if (distance <= 5.0f) // If the player is less than 5 Unity units away from the Tutorial Goblin, talk to the player.
             {
                 Cursor.lockState = CursorLockMode.None;
                 GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false;
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
                 GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false;
+
+                // Set up dialogue GUI, display dialogue, and call the functions for the corresponding dialogue choices that are selected.
 
                 pressed = true;
                 transform.LookAt(player.transform);
@@ -111,7 +113,7 @@ public class TutorialGoblin : MonoBehaviour
     {
         box.gameObject.SetActive(false);
         dialog0.gameObject.SetActive(false);
-        aggro.hostile = true;
+        aggro.hostile = true; // Tutorial Goblin starts attacking the player.
         Cursor.lockState = CursorLockMode.Locked;
         GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = true;
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;

@@ -16,7 +16,7 @@ public class HealthBar : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    GameObject player = GameObject.Find("Player");
+	    GameObject player = GameObject.Find("Player"); // The health bar will be filled based on the percentage of health that the player has remaining.
 	    healthbar.fillAmount = (player.gameObject.GetComponent<Player>().currentHealth/100.0f);
 	}
 }

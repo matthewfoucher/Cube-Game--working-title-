@@ -21,8 +21,8 @@ public class Dragon : MonoBehaviour
     {
         isDead = false; // Dragon is alive.
         // Setting the current health when the dragon first spawns.
-        currentHealth = startingHealth;
-        notAttacked = true;
+        currentHealth = startingHealth; // Dragon starts with 15,000 health.
+        notAttacked = true; // Dragon has not been attacked. Dragon goes aggro when attacked.
     }
 
     void OnTriggerEnter(Collider other)

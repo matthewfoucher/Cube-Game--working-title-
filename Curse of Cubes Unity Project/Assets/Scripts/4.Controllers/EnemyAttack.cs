@@ -40,8 +40,9 @@ public class EnemyAttack : MonoBehaviour {
         if (attackTimer < 0)
             attackTimer = 0;
 
-	    if (hostile)
+	    if (hostile) // Only calculate distance if the enemy is hostile. This makes the game run much faster.
 	    {
+            // If player is within aggro distance of goblin,
 	        if ((Vector3.Distance(transform.position, target.position) < aggro_dis) && (Vector3.Distance(transform.position, target.position) > min_dis))
 	        {
                 // Rotate to look at the player.
@@ -51,51 +52,37 @@ public class EnemyAttack : MonoBehaviour {
                 transform.Translate(Vector3.forward * Time.deltaTime * speed);
             }
 
-            if (Vector3.Distance(transform.position, target.position) < 2.5f)
+            if (Vector3.Distance(transform.position, target.position) < 2.5f) // If player is within striking distance,
             {
                 // Atack the player.
                 if (attackTimer == 0)
                 {
                     // Attack();
-                    weapon.GetComponent<BoxCollider>().enabled = true;
-                    weapon.transform.Rotate(0, 0, 90);
-                    attackTimer = coolDown;
-                    weaponDown = true;
-                    Invoke("ResetAttack", 0.2f);
+                    weapon.GetComponent<BoxCollider>().enabled = true; // Enable sword's box collider so it can do damage.
+                    weapon.transform.Rotate(0, 0, 90); // Rotate sword down 90 degrees.
+                    attackTimer = coolDown; // Reset attackTimer. Enemy may attack again in 2 seconds.
+                    weaponDown = true; // Weapon is attacking.
+                    Invoke("ResetAttack", 0.2f); // Wait 0.2 seconds, then reset the attack position of the sword.
                 }
-            }
-        }
-
-	    if ((Vector3.Distance(transform.position, target.position) < 2.5f) && (hostile))
-	    {
-            // Atack the player.
-            if (attackTimer == 0)
-            {
-                // Attack();
-                weapon.GetComponent<BoxCollider>().enabled = true;
-                weapon.transform.Rotate(0, 0, 90);
-                attackTimer = coolDown;
-                weaponDown = true;
-                Invoke("ResetAttack", 0.2f);
             }
         }
 	}
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) // If the player violates the enemy's personal space,
         {
-            hostile = true;
+            hostile = true; // enemy is now hostile.
         }
     }
 
     void ResetAttack()
     {
-        if (weaponDown)
+        if (weaponDown) // Reset the weapon back to attack position.
         {
-            weapon.GetComponent<BoxCollider>().enabled = false;
-            weaponDown = false;
-            weapon.transform.Rotate(0, 0, -90);
+            weapon.GetComponent<BoxCollider>().enabled = false; // Disable the box collider, so it can't hurt the player anymore.
+            weaponDown = false; // Weapon is not down anymore.
+            weapon.transform.Rotate(0, 0, -90); // Rotate weapon up 90 degrees.
         }
     }
 }
