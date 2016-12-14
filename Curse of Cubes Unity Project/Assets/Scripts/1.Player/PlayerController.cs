@@ -36,12 +36,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        /*
         if (Input.GetKeyDown(KeyCode.BackQuote)) // Reset player's position (testing).
         {
             transform.position = new Vector3(0.0f, 3.0f, 0.0f);
         }
-
+        */
         if (Input.GetKeyDown(KeyCode.LeftShift)) // While holding shift, move faster.
         {
             speed = speed * 1.5f;
