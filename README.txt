@@ -1,5 +1,11 @@
 Curse of Cubes: Dovahkube
 
+Developed by:
+John Vogel
+Matthew Williams
+Will Nelson
+Ye Tian
+
 WARNINGS:
 
 PLAY THE BUILT VERSION OF THE GAME.
