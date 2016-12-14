@@ -3,10 +3,17 @@ Curse of Cubes: Dovahkube
 WARNINGS:
 
 PLAY THE BUILT VERSION OF THE GAME.
-A build for Mac and a build for Windows are included in the Github directory.
+A build for Mac and a build for Windows are included in the Github directory,
+inside the Final Builds folder.
+We do not have a Mac and have not tested the Mac build, but it is Unity,
+so it should work with no issues.
 
 If the game is run in the editor, the lighting will be messed up when loading
 the game from the main menu scene.
+
+If you DO want to run the game in the editor, make sure to restart playing
+through the editor whenever you die or get an ending screen.
+
 
 If the game is run in the editor, sometimes the quit button will not have any
 text if you quit to the main menu.
