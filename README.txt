@@ -68,6 +68,8 @@ E: Speak with non-player characters (NPCs)
 
 I: Open the inventory
 
+Q: Use health potion (heal for 40 health)
+
 Escape: Pause the game
 
 
