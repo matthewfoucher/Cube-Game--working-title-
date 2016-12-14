@@ -78,6 +78,10 @@ public class GameOver : MonoBehaviour {
             {
                 desc2.text = "The thieves killed everyone in the town, though. Nice going!";
             }
+			else if (GlobalControl.Instance.thief != 4 && GlobalControl.Instance.npc == 0)
+            {
+                desc2.text = "You killed all of the NPCs, you bastard!";
+            }
         }
         else
         {
