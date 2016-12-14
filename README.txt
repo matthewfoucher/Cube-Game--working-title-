@@ -70,6 +70,8 @@ I: Open the inventory
 
 Q: Use health potion (heal for 40 health)
 
+Left Shift: Hold to sprint
+
 Escape: Pause the game
 
 
