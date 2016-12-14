@@ -6,6 +6,16 @@ Matthew Williams
 Will Nelson
 Ye Tian
 
+
+Additional credits:
+GlobalControl script found at: https://www.sitepoint.com/saving-data-between-scenes-in-unity/
+SmoothMouseLook script found at: http://wiki.unity3d.com/index.php/SmoothMouseLook
+PyroParticles Unity package downloaded from the assets store at: https://www.assetstore.unity3d.com/en/#!/content/36825
+
+All credit for these assets goes to the original creators.
+
+
+
 WARNINGS:
 
 PLAY THE BUILT VERSION OF THE GAME.
