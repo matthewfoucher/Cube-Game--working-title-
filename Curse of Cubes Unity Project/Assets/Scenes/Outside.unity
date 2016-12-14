@@ -8002,7 +8002,7 @@ GameObject:
   - 114: {fileID: 697543577}
   m_Layer: 0
   m_Name: Wizard
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21239,7 +21239,7 @@ GameObject:
   - 114: {fileID: 1654412411}
   m_Layer: 0
   m_Name: Dovahkiid
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25713,7 +25713,7 @@ GameObject:
   - 114: {fileID: 1949227221}
   m_Layer: 0
   m_Name: Smith
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27293,7 +27293,7 @@ GameObject:
   - 114: {fileID: 2099125251}
   m_Layer: 0
   m_Name: Peasant
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

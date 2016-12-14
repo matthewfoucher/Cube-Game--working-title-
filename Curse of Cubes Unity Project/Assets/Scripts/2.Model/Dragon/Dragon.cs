@@ -88,6 +88,9 @@ public class Dragon : MonoBehaviour
                 {
                     Quests.dragon = 3; // Set appropriate quest state.
                 }
+
+				GlobalControl.Instance.npc = Quests.npcCount;
+				GlobalControl.Instance.thief = Quests.thieves;
                 GlobalControl.Instance.dragon = Quests.dragon;
                 SceneManager.LoadScene("GameOver"); // Load game ending scene.
             }

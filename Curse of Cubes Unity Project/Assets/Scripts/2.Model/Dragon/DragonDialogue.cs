@@ -164,6 +164,8 @@ public class DragonDialogue : MonoBehaviour
 
     void MrPink()
     {
+		GlobalControl.Instance.npc = Quests.npcCount;
+		GlobalControl.Instance.thief = Quests.thieves;
         Quests.dragon = 4;
         GlobalControl.Instance.dragon = Quests.dragon;
         //changes dragon quest to reflect the 'suicide'

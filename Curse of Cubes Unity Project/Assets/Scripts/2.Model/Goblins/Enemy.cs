@@ -55,6 +55,22 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             isDead = true; // The enemy is now dead.
+
+			if (gameObject.CompareTag ("NPC")) //if NPC is killed
+			{
+				Quests.npcCount--;
+			}
+
+			if(gameObject.CompareTag("Knight") || gameObject.CompareTag("Thief"))
+			{
+				Quests.thiefCount--;
+			}
+
+			if (Quests.thiefCount == 0) 
+			{
+				Quests.thieves = 4;
+			}
+				
             Instantiate(health, gameObject.transform.position, Quaternion.identity); // Drop a health potion.
             Destroy(gameObject); // Destroy the enemy's game object.
         }

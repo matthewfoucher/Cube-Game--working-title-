@@ -8,6 +8,8 @@ public class GlobalControl : MonoBehaviour
     public static GlobalControl Instance;
 
     public int dragon; // The dragon quest state.
+	public int thief; //thief quest state
+	public int npc; //npc status 
 
     void Awake() // Only allow one instance of the game manager. It is a singleton.
     {
