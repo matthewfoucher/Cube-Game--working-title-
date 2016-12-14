@@ -923,4 +923,10 @@ public class Inventory : MonoBehaviour
             fadingIn = false;
         }
     }
+
+    // Used in our player controller if we pause the game while the inventory is open.
+    public float getAlpha()
+    {
+        return canvasGroup.alpha;
+    }
 }

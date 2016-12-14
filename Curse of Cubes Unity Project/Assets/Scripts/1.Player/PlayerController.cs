@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
                 dialog2.onClick.RemoveAllListeners();
                 GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = false; // Disable the camera rotation while in the pause menu.
                 GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = false; // Disable the player's ability to attack while the game is paused.
-
                 dialog0.text = "Do you want to quit back to the Main Menu?"; // Ask if the player wants to quit the game.
 
                 dialog1.GetComponentInChildren<Text>().text = "Yes"; // If yes, quit the game.
@@ -153,9 +152,12 @@ public class PlayerController : MonoBehaviour
         dialog1.gameObject.SetActive(false);
         dialog2.gameObject.SetActive(false);
         box.gameObject.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked; // Lock the mouse cursor, so we don't move the cursor offscreen while moving the camera around.
+        if (GameObject.Find("Inventory").GetComponent<Inventory>().getAlpha() == 0) // If the inventory is CLOSED:
+        {
+            Cursor.lockState = CursorLockMode.Locked; // Lock the mouse cursor, so we don't move the cursor offscreen while moving the camera around.
+            GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true; // Re-enable the mouselook script, so we can move the camera around with the mouse again.
+        }
         Time.timeScale = 1.0f; // Set timeScale back to 1.0. Game moves at regular speed now.
-        GameObject.Find("Main Camera").GetComponent<SmoothMouseLook>().enabled = true; // Re-enable the mouselook script, so we can move the camera around with the mouse again.
         paused = false; // The game is no longer paused.
         GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = true; // Re-enable the player attack script.
     }
