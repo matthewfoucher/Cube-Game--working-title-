@@ -3,9 +3,10 @@ Curse of Cubes: Dovahkube
 WARNINGS:
 
 PLAY THE BUILT VERSION OF THE GAME.
-A build for Mac and a build for Windows are included in the Github directory,
-inside the Final Builds folder.
-We do not have a Mac and have not tested the Mac build, but it is Unity,
+
+Build the project if you want it to run smoothly.
+
+We do not have a Mac and have not tested the game on Mac, but it is Unity,
 so it should work with no issues.
 
 If the game is run in the editor, the lighting will be messed up when loading
