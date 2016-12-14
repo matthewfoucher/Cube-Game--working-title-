@@ -60,19 +60,29 @@ public class GameOver : MonoBehaviour {
             desc1.text = "The Dovahkube has died. Better luck next time!";
         }
 
-		if (GlobalControl.Instance.dragon > 1) {
-			if (GlobalControl.Instance.thief == 4 && GlobalControl.Instance.npc == 4) {
-				desc2.text = "The thieves were killed and the NPCs are restored back to their former selves.";
-			} else if (GlobalControl.Instance.npc > 0 && GlobalControl.Instance.npc < 4) {
-				desc2.text = "You killed some of the NPCs, you bastard!";
-			} else if (GlobalControl.Instance.thief == 4 && GlobalControl.Instance.npc == 0) {
-				desc2.text = "The Dovahkube murdered everything in his path. O_O";
-			} else if (GlobalControl.Instance.thief != 4 && GlobalControl.Instance.npc == 4) {
-				desc2.text = "The thieves killed everyone in the town, nice going!";
-			}
-		} else {
-			desc2.text = "";
-		}
+        if (GlobalControl.Instance.dragon > 1)
+        {
+            if (GlobalControl.Instance.thief == 4 && GlobalControl.Instance.npc == 4)
+            {
+                desc2.text = "The thieves were killed and the NPCs are restored back to their former selves.";
+            }
+            else if (GlobalControl.Instance.npc > 0 && GlobalControl.Instance.npc < 4)
+            {
+                desc2.text = "You killed some of the NPCs, you bastard!";
+            }
+            else if (GlobalControl.Instance.thief == 4 && GlobalControl.Instance.npc == 0)
+            {
+                desc2.text = "The Dovahkube murdered everything in his path. O_O";
+            }
+            else if (GlobalControl.Instance.thief != 4 && GlobalControl.Instance.npc == 4)
+            {
+                desc2.text = "The thieves killed everyone in the town, though. Nice going!";
+            }
+        }
+        else
+        {
+            desc2.text = "";
+        }
     }
 
     public void OnClickMain()

@@ -63,7 +63,6 @@ public class Dovahkiid : MonoBehaviour
         dialog2.gameObject.SetActive(false);
         dialog1.onClick.RemoveAllListeners();
         dialog1.onClick.AddListener(ASS);
-		gameObject.SetActive (false); // disables dovahkiid when he joins the coop for dragon, so you can't get epic sword too
     }
 
     void Huh()
@@ -83,6 +82,7 @@ public class Dovahkiid : MonoBehaviour
         box.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         complete = true; //either the player gets the blood or coop
+        gameObject.SetActive(false); // disables dovahkiid when he joins the coop for dragon, so you can't get epic sword too
 
         GameObject.Find("Player").GetComponent<PlayerAttack>().enabled = true;
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;

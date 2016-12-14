@@ -38,9 +38,9 @@ public class Thief : MonoBehaviour
                 dialog2.gameObject.SetActive(false);
                 dialog1.onClick.RemoveAllListeners();
 
-                dialog0.text = "Leave me be, or I'll cut you clean open Cube.";
+                dialog0.text = "Leave me be, or I'll cut you clean open, Cube.";
 
-                dialog1.GetComponentInChildren<Text>().text = "... Uhh Ok, you seem shady though.";
+                dialog1.GetComponentInChildren<Text>().text = "... Uhh Ok. You seem shady, though.";
 
                 dialog1.onClick.AddListener(Leave);
             }
