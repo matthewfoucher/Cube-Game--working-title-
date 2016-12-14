@@ -11,6 +11,8 @@ Additional credits:
 GlobalControl script found at: https://www.sitepoint.com/saving-data-between-scenes-in-unity/
 SmoothMouseLook script found at: http://wiki.unity3d.com/index.php/SmoothMouseLook
 PyroParticles Unity package downloaded from the assets store at: https://www.assetstore.unity3d.com/en/#!/content/36825
+Flower Sprite: http://neoriceisgood.deviantart.com/art/100-Flower-Sprites-348880673
+Magic Wand Sprite: https://thenounproject.com/term/magic-wand/1294/
 
 All credit for these assets goes to the original creators.
 
@@ -81,29 +83,29 @@ Escape: Pause the game
 NPCs:
 
 
-Wizard – Wears a wizard hat. Funny man. Being a cube stripped him of his magic, though.
+Wizard â€“ Wears a wizard hat. Funny man. Being a cube stripped him of his magic, though.
 He has a quest for the player to find his wand that he dropped in the dragon cave.
 
 
-Peasant – Wears a cloth hat. Makes sarcastic, snarky, fourth wall-breaking comments
+Peasant â€“ Wears a cloth hat. Makes sarcastic, snarky, fourth wall-breaking comments
 that critique the concept of the game. Has a conspiracy that since the only
 recognizable attribute is silly hats, someone could be in disguise and be up to no good.
 
 
-Knight – Wears a knight helmet and holds a sword. Serious man. . . Or so it seems.
+Knight â€“ Wears a knight helmet and holds a sword. Serious man. . . Or so it seems.
 
 
-Smith – Has glasses and holds a hammer. Talks like a funny dwarf.
+Smith â€“ Has glasses and holds a hammer. Talks like a funny dwarf.
 If the player can collect the correct materials for him, he can build an EPIC sword
 that can actually hurt the dragon. The smith hates the Dovahkiid, as he believes that
 he was really a false prophet and wants him dead. Likewise, he idolizes the Dovahkube
 as the new savior. 
 
 
-Thief – Seemingly a lonely cube. Asks the player to leave him alone.
+Thief â€“ Seemingly a lonely cube. Asks the player to leave him alone.
 
 
-Three-Headed Dragon – 3 dragons of legend fused together by an evil wizard.
+Three-Headed Dragon â€“ 3 dragons of legend fused together by an evil wizard.
 They immediately kill the wizard for putting them together, and, since there is no
 other wizard powerful enough to revert it, they are stuck together forever.
 The 3 heads are all distinct, and hate each other. The main one used to be able to
@@ -115,17 +117,17 @@ The left hand side pink head is aggressive, always hungry for more humans, and i
 always angry.
 
 
-Dovahkiid – The true dragon slayer of legend. He got lost in the dragon cave when
+Dovahkiid â€“ The true dragon slayer of legend. He got lost in the dragon cave when
 trying to find the dragon. When the player finds him, the Dovahkiid will ask him
 where to find the dragon. The player can tell him where the dragon is
 (which will cause him to show up and join the Player in the boss fight), or choose
 not to tell him. He is really nice as he is the true messiah, but since he got lost
-on his way to the fight, the community thinks he’s a false prophet. Thus once the
+on his way to the fight, the community thinks heâ€™s a false prophet. Thus once the
 player asks him for some blood, he will give it to him without question. But if you
 kill him, you get the blood, too. 
 
 
-Goblins – They were turned into cubes as well by the dragon. They are the mobs of the
+Goblins â€“ They were turned into cubes as well by the dragon. They are the mobs of the
 area and show up in the forest and caves. They are green cubes. 
 
 
